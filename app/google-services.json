@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "32200133964",
+    "project_id": "upmessenger-e2ea3",
+    "storage_bucket": "upmessenger-e2ea3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32200133964:android:a31eb56ab1be55781e53e9",
+        "android_client_info": {
+          "package_name": "com.example.upmessenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32200133964-v1k0m98ct2tesb4nf7nhsu7fvurm1f9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhZ5VSBKBPC77gMdbvmwLt17wSDz5sRcY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32200133964-v1k0m98ct2tesb4nf7nhsu7fvurm1f9p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

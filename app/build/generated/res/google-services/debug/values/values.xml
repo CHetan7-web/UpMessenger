@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">32200133964-v1k0m98ct2tesb4nf7nhsu7fvurm1f9p.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">32200133964</string>
+    <string name="google_api_key" translatable="false">AIzaSyBhZ5VSBKBPC77gMdbvmwLt17wSDz5sRcY</string>
+    <string name="google_app_id" translatable="false">1:32200133964:android:a31eb56ab1be55781e53e9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBhZ5VSBKBPC77gMdbvmwLt17wSDz5sRcY</string>
+    <string name="google_storage_bucket" translatable="false">upmessenger-e2ea3.appspot.com</string>
+    <string name="project_id" translatable="false">upmessenger-e2ea3</string>
+</resources>
