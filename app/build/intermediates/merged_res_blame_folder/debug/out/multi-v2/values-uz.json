@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
+            "outputFile": "F:\\UpMessenger\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\dd899772f6be5434b73cf178284bcfa8\\transformed\\play-services-basement-17.1.0\\res\\values-uz\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "208",
-                        "endOffsets": "455"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3931",
-                        "endColumns": "208",
-                        "endOffsets": "4135"
-                    }
-                },
                 {
                     "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\a36df60b8e600f16cf923ba9ac92e536\\transformed\\appcompat-1.2.0\\res\\values-uz\\values-uz.xml",
                     "from": {
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\b5289ac9a641f59dd763ec5754e962f8\\transformed\\play-services-base-17.1.0\\res\\values-uz\\values.xml",
+                    "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\30e1d9fe8485040957368660f84fe49b\\transformed\\play-services-base-17.5.0\\res\\values-uz\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,6 +52,23 @@
                         "startOffsets": "5590",
                         "endColumns": "100",
                         "endOffsets": "5686"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\4e47f34fef273f1ed37b379a4603c6d2\\transformed\\play-services-basement-17.5.0\\res\\values-uz\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "208",
+                        "endOffsets": "455"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3931",
+                        "endColumns": "208",
+                        "endOffsets": "4135"
                     }
                 }
             ]

@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UpMessenger/app/src/main/res/drawable/google_icon.xml" value="0.2703125" />
+        <entry key="..\:/UpMessenger/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/UpMessenger/app/src/main/res/drawable/logout_img.xml" value="0.2703125" />
+        <entry key="..\:/UpMessenger/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Chetan/AndroidStudioProjects/UpMessenger/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Chetan/AndroidStudioProjects/UpMessenger/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Chetan/AndroidStudioProjects/UpMessenger/app/src/main/res/menu/signout_menu.xml" value="0.25416666666666665" />

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
+            "outputFile": "F:\\UpMessenger\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\a36df60b8e600f16cf923ba9ac92e536\\transformed\\appcompat-1.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\dd899772f6be5434b73cf178284bcfa8\\transformed\\play-services-basement-17.1.0\\res\\values-zh-rHK\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "166",
-                        "endOffsets": "417"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3688",
-                        "endColumns": "166",
-                        "endOffsets": "3850"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\b5289ac9a641f59dd763ec5754e962f8\\transformed\\play-services-base-17.1.0\\res\\values-zh-rHK\\values.xml",
+                    "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\30e1d9fe8485040957368660f84fe49b\\transformed\\play-services-base-17.5.0\\res\\values-zh-rHK\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +35,23 @@
                         "startOffsets": "2666,2769,2929,3046,3150,3316,3434,3566,3855,4024,4127,4287,4404,4570,4708,4793,4880",
                         "endColumns": "102,159,116,103,165,117,131,121,168,102,159,116,165,137,84,86,100",
                         "endOffsets": "2764,2924,3041,3145,3311,3429,3561,3683,4019,4122,4282,4399,4565,4703,4788,4875,4976"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\4e47f34fef273f1ed37b379a4603c6d2\\transformed\\play-services-basement-17.5.0\\res\\values-zh-rHK\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "166",
+                        "endOffsets": "417"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3688",
+                        "endColumns": "166",
+                        "endOffsets": "3850"
                     }
                 },
                 {
