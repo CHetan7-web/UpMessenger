@@ -20,8 +20,20 @@
         "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\logout_img.png"
     },
     {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_google__g__logo.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_google__g__logo.png"
+    },
+    {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_google__g__logo.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_google__g__logo.png"
+    },
+    {
         "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_logout_img.png.flat",
         "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\logout_img.png"
+    },
+    {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_google__g__logo.xml.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_google__g__logo.xml"
     },
     {
         "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
@@ -44,6 +56,14 @@
         "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_google__g__logo.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_google__g__logo.png"
+    },
+    {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_google__g__logo.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_google__g__logo.png"
+    },
+    {
         "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
@@ -54,6 +74,10 @@
     {
         "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_logout_img.png.flat",
         "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\logout_img.png"
+    },
+    {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_google__g__logo.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_google__g__logo.png"
     },
     {
         "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -104,12 +128,20 @@
         "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\logout_img.png"
     },
     {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_google__g__logo.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_google__g__logo.png"
+    },
+    {
         "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
         "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_google.jpg.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\drawable-v24\\google.jpg"
     },
     {
         "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
