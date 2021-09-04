@@ -1,43 +1,53 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\Chetan\.gradle\caches\transforms-3\a4db12b072650e13bc36a4fc9443bd47\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\17c0fc7dffeebaa4c073d796c14c2104\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Chetan\.gradle\caches\transforms-3\a36df60b8e600f16cf923ba9ac92e536\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\99e33d49eb6cb3c8d9236007e84fbe53\transformed\firebase-auth-21.0.1\AndroidManifest.xml:17:1-83:12
 MERGED from [com.google.firebase:firebase-database:20.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\7b400ea217a8bf9c711ec34916c87208\transformed\firebase-database-20.0.1\AndroidManifest.xml:15:1-38:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\249b2ca2595015eb36b75fe22c71b0a5\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\Chetan\.gradle\caches\transforms-3\b4d46fc1bd62c40061ed95432479019b\transformed\firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:15:1-26:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\451a339f9d7b85ee9761c9ed0292dc01\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\ed8893f1a326696110e4d10af8917bc2\transformed\firebase-common-20.0.0\AndroidManifest.xml:15:1-40:12
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\b27bb07903eaf3cd5f3a3227bb279aad\transformed\browser-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\3204680fb4b944995355cb67e2d4416a\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\048a965a9baba68ce9534c35414bd90c\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\11108c40f6b4b45114902fb5915eea42\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\6a8526c0a916dd9f10beea66e0647d2e\transformed\firebase-database-collection-18.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\Chetan\.gradle\caches\transforms-3\4c85c356f92b73b2caf8ebde0606e00e\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\bbd0db670b9e967ac2d81e2396acc52e\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\play-services-base-17.1.0\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\70f1ac1e1cf7e522e65d353bbb165c3f\transformed\play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\70f1ac1e1cf7e522e65d353bbb165c3f\transformed\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\dd899772f6be5434b73cf178284bcfa8\transformed\play-services-basement-17.1.0\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\eb6ddc23026c0b1e4fb0e8a47ba8c20b\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Chetan\.gradle\caches\transforms-3\dab1d1a328d27702dafd040a2ed380c4\transformed\appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\6677abf4b9f59fe19070d1e82b772f47\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5b6087d2a888dc8cd66652dafdfd98d8\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\dbc66d810aadfcbae204aa9f2c96beac\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\2f7c01c10d3d7134859f80fe1123d2f3\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\67107a3834f5bdfab42618899f8666fc\transformed\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5ef5de6b86aba927bed289e100b66e4d\transformed\firebase-components-17.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\429829a900074ab331793515e7b0d630\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\366d65d445297f8fde8f73cd755ab914\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Chetan\.gradle\caches\transforms-3\06e956728079b62473f9071c0ed43744\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\fdd32f901d4bb1d5d33bddeb84a905c7\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\29de5575f9927728f2259ca80dea1987\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\4ee163fa638845225c9ea0ff8537e70a\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\cabc7bf9fcd04c9bc88fe0c2ed8f8af4\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\dbc66d810aadfcbae204aa9f2c96beac\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5b6087d2a888dc8cd66652dafdfd98d8\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\2f7c01c10d3d7134859f80fe1123d2f3\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\67107a3834f5bdfab42618899f8666fc\transformed\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b00d5cc1ee2b8898b26695c875041071\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\dbe6632ea1830f7b528d4645a38df2bc\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\bd33b12c49278f934d4edec5459af236\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\179bb343f7a6cb4f265a076d12a07093\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\0d6128869f3f5054df81b46d7aeb5c68\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.3.1] C:\Users\Chetan\.gradle\caches\transforms-3\745bff200f24de33ced55d848ac9d285\transformed\core-1.3.1\AndroidManifest.xml:17:1-26:12
-MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5ef5de6b86aba927bed289e100b66e4d\transformed\firebase-components-17.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.core:core:1.5.0] C:\Users\Chetan\.gradle\caches\transforms-3\a6ed9dfb3abf7d8541f7a1d01bf1d39b\transformed\core-1.5.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\73024ad51a4df5238a90a9d634a365dd\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\11a446e7d11d9332c5acc6192805398e\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\6f300e842235b08c25596d2dad6c7d95\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Chetan\.gradle\caches\transforms-3\c11d12a2baf277b837d8806c6f87fc44\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\607ff11b516ddc96487249f810d47dc2\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\e0704842989cea6c82cf2a91963d9437\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\d29c7a8a10622f03cba94cde485782f1\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\9395cd112f9374ea49453352b112f895\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\07e1453faacf0342389e7b9a09068afc\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
@@ -45,29 +55,30 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Chetan\.gradle\cache
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\353f40e5d33d4a82de3f263c7f387564\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\99de6d5f19c0fb30d550d4e58eb4f694\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\a215fcf90a6672089c884fa6be74ee50\transformed\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\607ff11b516ddc96487249f810d47dc2\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\e0704842989cea6c82cf2a91963d9437\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\bcde78bc88dd626eb99fc345b357b7d4\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:3:5-38
-		INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:3:5-38
+		INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
-		INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:4:5-51
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:4:5-51
 	android:versionCode
-		INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
-		INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:7:5-24:19
+ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:7:5-24:19
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\Chetan\.gradle\caches\transforms-3\a4db12b072650e13bc36a4fc9443bd47\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\Chetan\.gradle\caches\transforms-3\a4db12b072650e13bc36a4fc9443bd47\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\17c0fc7dffeebaa4c073d796c14c2104\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\17c0fc7dffeebaa4c073d796c14c2104\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\99e33d49eb6cb3c8d9236007e84fbe53\transformed\firebase-auth-21.0.1\AndroidManifest.xml:26:5-81:19
@@ -82,58 +93,60 @@ MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Chetan\.gradle
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\ed8893f1a326696110e4d10af8917bc2\transformed\firebase-common-20.0.0\AndroidManifest.xml:25:5-38:19
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\bbd0db670b9e967ac2d81e2396acc52e\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\bbd0db670b9e967ac2d81e2396acc52e\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\play-services-base-17.1.0\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\play-services-base-17.1.0\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\70f1ac1e1cf7e522e65d353bbb165c3f\transformed\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\70f1ac1e1cf7e522e65d353bbb165c3f\transformed\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\70f1ac1e1cf7e522e65d353bbb165c3f\transformed\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\70f1ac1e1cf7e522e65d353bbb165c3f\transformed\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\dd899772f6be5434b73cf178284bcfa8\transformed\play-services-basement-17.1.0\AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\dd899772f6be5434b73cf178284bcfa8\transformed\play-services-basement-17.1.0\AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.core:core:1.3.1] C:\Users\Chetan\.gradle\caches\transforms-3\745bff200f24de33ced55d848ac9d285\transformed\core-1.3.1\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.3.1] C:\Users\Chetan\.gradle\caches\transforms-3\745bff200f24de33ced55d848ac9d285\transformed\core-1.3.1\AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\6f300e842235b08c25596d2dad6c7d95\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\6f300e842235b08c25596d2dad6c7d95\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.core:core:1.5.0] C:\Users\Chetan\.gradle\caches\transforms-3\a6ed9dfb3abf7d8541f7a1d01bf1d39b\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0] C:\Users\Chetan\.gradle\caches\transforms-3\a6ed9dfb3abf7d8541f7a1d01bf1d39b\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Chetan\.gradle\caches\transforms-3\c11d12a2baf277b837d8806c6f87fc44\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Chetan\.gradle\caches\transforms-3\c11d12a2baf277b837d8806c6f87fc44\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.3.1] C:\Users\Chetan\.gradle\caches\transforms-3\745bff200f24de33ced55d848ac9d285\transformed\core-1.3.1\AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.5.0] C:\Users\Chetan\.gradle\caches\transforms-3\a6ed9dfb3abf7d8541f7a1d01bf1d39b\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:14:9-49
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:14:9-49
 	tools:replace
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:8:9-36
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:8:9-36
 activity#com.example.upmessenger.Activity.SignInActivity
-ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:15:9-70
+ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:15:9-70
 	android:name
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:15:19-58
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:15:19-58
 activity#com.example.upmessenger.Activity.SignUpActivity
-ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:16:9-22:20
+ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:16:19-58
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:16:19-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:20:27-74
 activity#com.example.upmessenger.Activity.MainActivity
-ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:23:9-68
+ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:23:9-68
 	android:name
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml:23:19-56
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml:23:19-56
 uses-sdk
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\Chetan\.gradle\caches\transforms-3\a4db12b072650e13bc36a4fc9443bd47\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\Chetan\.gradle\caches\transforms-3\a4db12b072650e13bc36a4fc9443bd47\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\17c0fc7dffeebaa4c073d796c14c2104\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\17c0fc7dffeebaa4c073d796c14c2104\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Chetan\.gradle\caches\transforms-3\a36df60b8e600f16cf923ba9ac92e536\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
@@ -142,6 +155,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Chetan\.gradle\c
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\99e33d49eb6cb3c8d9236007e84fbe53\transformed\firebase-auth-21.0.1\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-database:20.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\7b400ea217a8bf9c711ec34916c87208\transformed\firebase-database-20.0.1\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-database:20.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\7b400ea217a8bf9c711ec34916c87208\transformed\firebase-database-20.0.1\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\249b2ca2595015eb36b75fe22c71b0a5\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\249b2ca2595015eb36b75fe22c71b0a5\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\Chetan\.gradle\caches\transforms-3\b4d46fc1bd62c40061ed95432479019b\transformed\firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\Chetan\.gradle\caches\transforms-3\b4d46fc1bd62c40061ed95432479019b\transformed\firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\451a339f9d7b85ee9761c9ed0292dc01\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
@@ -154,16 +169,18 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Chetan\.grad
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\3204680fb4b944995355cb67e2d4416a\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\048a965a9baba68ce9534c35414bd90c\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\048a965a9baba68ce9534c35414bd90c\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\11108c40f6b4b45114902fb5915eea42\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\11108c40f6b4b45114902fb5915eea42\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\6a8526c0a916dd9f10beea66e0647d2e\transformed\firebase-database-collection-18.0.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\6a8526c0a916dd9f10beea66e0647d2e\transformed\firebase-database-collection-18.0.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\Chetan\.gradle\caches\transforms-3\4c85c356f92b73b2caf8ebde0606e00e\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\Chetan\.gradle\caches\transforms-3\4c85c356f92b73b2caf8ebde0606e00e\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\bbd0db670b9e967ac2d81e2396acc52e\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\bbd0db670b9e967ac2d81e2396acc52e\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\play-services-base-17.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\play-services-base-17.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\70f1ac1e1cf7e522e65d353bbb165c3f\transformed\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\70f1ac1e1cf7e522e65d353bbb165c3f\transformed\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\70f1ac1e1cf7e522e65d353bbb165c3f\transformed\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\70f1ac1e1cf7e522e65d353bbb165c3f\transformed\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\dd899772f6be5434b73cf178284bcfa8\transformed\play-services-basement-17.1.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\dd899772f6be5434b73cf178284bcfa8\transformed\play-services-basement-17.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\eb6ddc23026c0b1e4fb0e8a47ba8c20b\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -172,20 +189,30 @@ MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Chetan\.grad
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Chetan\.gradle\caches\transforms-3\dab1d1a328d27702dafd040a2ed380c4\transformed\appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\6677abf4b9f59fe19070d1e82b772f47\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\6677abf4b9f59fe19070d1e82b772f47\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5b6087d2a888dc8cd66652dafdfd98d8\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5b6087d2a888dc8cd66652dafdfd98d8\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\dbc66d810aadfcbae204aa9f2c96beac\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\dbc66d810aadfcbae204aa9f2c96beac\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\2f7c01c10d3d7134859f80fe1123d2f3\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\2f7c01c10d3d7134859f80fe1123d2f3\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\67107a3834f5bdfab42618899f8666fc\transformed\activity-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\67107a3834f5bdfab42618899f8666fc\transformed\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5ef5de6b86aba927bed289e100b66e4d\transformed\firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5ef5de6b86aba927bed289e100b66e4d\transformed\firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\429829a900074ab331793515e7b0d630\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\429829a900074ab331793515e7b0d630\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\366d65d445297f8fde8f73cd755ab914\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\366d65d445297f8fde8f73cd755ab914\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Chetan\.gradle\caches\transforms-3\06e956728079b62473f9071c0ed43744\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Chetan\.gradle\caches\transforms-3\06e956728079b62473f9071c0ed43744\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\fdd32f901d4bb1d5d33bddeb84a905c7\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\fdd32f901d4bb1d5d33bddeb84a905c7\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\29de5575f9927728f2259ca80dea1987\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\29de5575f9927728f2259ca80dea1987\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\4ee163fa638845225c9ea0ff8537e70a\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\4ee163fa638845225c9ea0ff8537e70a\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\cabc7bf9fcd04c9bc88fe0c2ed8f8af4\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\cabc7bf9fcd04c9bc88fe0c2ed8f8af4\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\dbc66d810aadfcbae204aa9f2c96beac\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\dbc66d810aadfcbae204aa9f2c96beac\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5b6087d2a888dc8cd66652dafdfd98d8\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5b6087d2a888dc8cd66652dafdfd98d8\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\2f7c01c10d3d7134859f80fe1123d2f3\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\2f7c01c10d3d7134859f80fe1123d2f3\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\67107a3834f5bdfab42618899f8666fc\transformed\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\67107a3834f5bdfab42618899f8666fc\transformed\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b00d5cc1ee2b8898b26695c875041071\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b00d5cc1ee2b8898b26695c875041071\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\dbe6632ea1830f7b528d4645a38df2bc\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\dbe6632ea1830f7b528d4645a38df2bc\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\bd33b12c49278f934d4edec5459af236\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
@@ -194,14 +221,18 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Chet
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\179bb343f7a6cb4f265a076d12a07093\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\0d6128869f3f5054df81b46d7aeb5c68\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\0d6128869f3f5054df81b46d7aeb5c68\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.3.1] C:\Users\Chetan\.gradle\caches\transforms-3\745bff200f24de33ced55d848ac9d285\transformed\core-1.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.3.1] C:\Users\Chetan\.gradle\caches\transforms-3\745bff200f24de33ced55d848ac9d285\transformed\core-1.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5ef5de6b86aba927bed289e100b66e4d\transformed\firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\5ef5de6b86aba927bed289e100b66e4d\transformed\firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\Chetan\.gradle\caches\transforms-3\a6ed9dfb3abf7d8541f7a1d01bf1d39b\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\Chetan\.gradle\caches\transforms-3\a6ed9dfb3abf7d8541f7a1d01bf1d39b\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\73024ad51a4df5238a90a9d634a365dd\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\73024ad51a4df5238a90a9d634a365dd\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\11a446e7d11d9332c5acc6192805398e\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\11a446e7d11d9332c5acc6192805398e\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\6f300e842235b08c25596d2dad6c7d95\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\6f300e842235b08c25596d2dad6c7d95\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Chetan\.gradle\caches\transforms-3\c11d12a2baf277b837d8806c6f87fc44\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Chetan\.gradle\caches\transforms-3\c11d12a2baf277b837d8806c6f87fc44\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\607ff11b516ddc96487249f810d47dc2\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\607ff11b516ddc96487249f810d47dc2\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\e0704842989cea6c82cf2a91963d9437\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\e0704842989cea6c82cf2a91963d9437\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\d29c7a8a10622f03cba94cde485782f1\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\d29c7a8a10622f03cba94cde485782f1\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\9395cd112f9374ea49453352b112f895\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
@@ -216,20 +247,18 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Chetan\.
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\99de6d5f19c0fb30d550d4e58eb4f694\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\a215fcf90a6672089c884fa6be74ee50\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\a215fcf90a6672089c884fa6be74ee50\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\607ff11b516ddc96487249f810d47dc2\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\607ff11b516ddc96487249f810d47dc2\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\e0704842989cea6c82cf2a91963d9437\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\e0704842989cea6c82cf2a91963d9437\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\bcde78bc88dd626eb99fc345b357b7d4\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\bcde78bc88dd626eb99fc345b357b7d4\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
+INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Chetan\AndroidStudioProjects\UpMessenger\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
+		ADDED from F:\UpMessenger\app\src\main\AndroidManifest.xml
+		INJECTED from F:\UpMessenger\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\99e33d49eb6cb3c8d9236007e84fbe53\transformed\firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-database:20.0.1] C:\Users\Chetan\.gradle\caches\transforms-3\7b400ea217a8bf9c711ec34916c87208\transformed\firebase-database-20.0.1\AndroidManifest.xml:26:5-67
@@ -343,13 +372,13 @@ ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Chetan\.gradle\
 	android:name
 		ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Chetan\.gradle\caches\transforms-3\ed8893f1a326696110e4d10af8917bc2\transformed\firebase-common-20.0.0\AndroidManifest.xml:27:13-77
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\b5289ac9a641f59dd763ec5754e962f8\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Chetan\.gradle\caches\transforms-3\dd899772f6be5434b73cf178284bcfa8\transformed\play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
 	android:value

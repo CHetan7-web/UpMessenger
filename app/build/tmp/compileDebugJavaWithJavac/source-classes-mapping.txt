@@ -1,9 +1,7 @@
-com/example/upmessenger/Models/UpUsers.java
- com.example.upmessenger.Models.UpUsers
-com/example/upmessenger/BuildConfig.java
- com.example.upmessenger.BuildConfig
 com/example/upmessenger/Activity/MainActivity.java
  com.example.upmessenger.Activity.MainActivity
+com/example/upmessenger/Fragments/StatusFragment.java
+ com.example.upmessenger.Fragments.StatusFragment
 com/example/upmessenger/Activity/SignUpActivity.java
  com.example.upmessenger.Activity.SignUpActivity
  com.example.upmessenger.Activity.SignUpActivity$1
@@ -14,3 +12,14 @@ com/example/upmessenger/Activity/SignInActivity.java
  com.example.upmessenger.Activity.SignInActivity$1
  com.example.upmessenger.Activity.SignInActivity$2
  com.example.upmessenger.Activity.SignInActivity$2$1
+com/example/upmessenger/BuildConfig.java
+ com.example.upmessenger.BuildConfig
+com/example/upmessenger/Fragments/ProfileFragment.java
+ com.example.upmessenger.Fragments.ProfileFragment
+com/example/upmessenger/Models/UpUsers.java
+ com.example.upmessenger.Models.UpUsers
+com/example/upmessenger/Adapters/FragmentAdapter.java
+ com.example.upmessenger.Adapters.FragmentAdapter
+com/example/upmessenger/Fragments/ChatFragment.java
+ com.example.upmessenger.Fragments.ChatFragment
+ com.example.upmessenger.Fragments.ChatFragment$1
