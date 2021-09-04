@@ -569,6 +569,7 @@ int color error_color_material_light 0x7f04003e
 int color facebook 0x7f04003f
 int color foreground_material_dark 0x7f040040
 int color foreground_material_light 0x7f040041
+int color greybackground 0x7f04006e
 int color highlighted_text_material_dark 0x7f040042
 int color highlighted_text_material_light 0x7f040043
 int color material_blue_grey_800 0x7f040044
@@ -845,9 +846,11 @@ int drawable common_google_signin_btn_text_light 0x7f06006e
 int drawable common_google_signin_btn_text_light_focused 0x7f06006f
 int drawable common_google_signin_btn_text_light_normal 0x7f060070
 int drawable common_google_signin_btn_text_light_normal_background 0x7f060071
+int drawable facebook_icon 0x7f060087
 int drawable google 0x7f060072
 int drawable googleg_disabled_color_18 0x7f060073
 int drawable googleg_standard_color_18 0x7f060074
+int drawable ic__86960_whatsapp_icon 0x7f060088
 int drawable ic_google__g__logo 0x7f060075
 int drawable ic_launcher_background 0x7f060076
 int drawable ic_launcher_foreground 0x7f060077

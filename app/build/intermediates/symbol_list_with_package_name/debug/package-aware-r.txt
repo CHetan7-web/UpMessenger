@@ -570,6 +570,7 @@ color error_color_material_light
 color facebook
 color foreground_material_dark
 color foreground_material_light
+color greybackground
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -846,9 +847,11 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable facebook_icon
 drawable google
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic__86960_whatsapp_icon
 drawable ic_google__g__logo
 drawable ic_launcher_background
 drawable ic_launcher_foreground

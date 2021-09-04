@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
+import com.facebook.CallbackManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -46,6 +47,7 @@ public class SignInActivity extends AppCompatActivity {
     TextView tvSignUp;
 
     ProgressDialog proDialog;
+    CallbackManager callbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class SignInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         mAuth = FirebaseAuth.getInstance();
+
+        callbackManager = CallbackManager.Factory.create();
 
         db = FirebaseDatabase.getInstance();
         myRef = db.getReference("Users");
