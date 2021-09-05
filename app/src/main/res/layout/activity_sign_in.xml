@@ -89,17 +89,17 @@
                 android:paddingBottom="10dp"
                 android:text="Google" />
 
-            <Button
-                android:id="@+id/btnFaceBook"
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/facebook_icon"
-                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:padding="10dp"
                 android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="Facebook" />
+                android:paddingBottom="10dp" />
+
 
         </LinearLayout>
 

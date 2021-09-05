@@ -15,6 +15,7 @@ com/example/upmessenger/Activity/SignInActivity.java
  com.example.upmessenger.Activity.SignInActivity
  com.example.upmessenger.Activity.SignInActivity$1
  com.example.upmessenger.Activity.SignInActivity$2
- com.example.upmessenger.Activity.SignInActivity$2$1
  com.example.upmessenger.Activity.SignInActivity$3
+ com.example.upmessenger.Activity.SignInActivity$3$1
  com.example.upmessenger.Activity.SignInActivity$4
+ com.example.upmessenger.Activity.SignInActivity$5

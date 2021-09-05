@@ -16,6 +16,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
 import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -33,9 +39,13 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class SignInActivity extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 63;
+    private static final String EMAIL = "chetanurkude111@gmail.com" ;
 
     private FirebaseDatabase db;
     private DatabaseReference myRef;
@@ -43,6 +53,7 @@ public class SignInActivity extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient ;
 
     Button btnSignIn,btnGoogle;
+    LoginButton loginButton;
     EditText etName,etEmail ,etPassword;
     TextView tvSignUp;
 
@@ -52,6 +63,8 @@ public class SignInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        FacebookSdk.sdkInitialize(getApplicationContext());
+//        AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_sign_in);
 
         mAuth = FirebaseAuth.getInstance();
@@ -69,6 +82,32 @@ public class SignInActivity extends AppCompatActivity {
 
         btnSignIn = findViewById(R.id.btnSignIn);
         btnGoogle = findViewById(R.id.btnGoogle);
+//        btnFacebook.setReadPermissions(Arrays.asList(EMAIL));
+
+
+
+
+        loginButton = (LoginButton) findViewById(R.id.login_button);
+        loginButton.setReadPermissions(Arrays.asList("email"));
+        // If you are using in a fragment, call loginButton.setFragment(this);
+
+        // Callback registration
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                // App code
+            }
+
+            @Override
+            public void onCancel() {
+                // App code
+            }
+
+            @Override
+            public void onError(FacebookException exception) {
+                // App code
+            }
+        });
 
         tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,6 +170,8 @@ public class SignInActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {

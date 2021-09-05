@@ -4,6 +4,25 @@
             "outputFile": "F:\\UpMessenger\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\73024ad51a4df5238a90a9d634a365dd\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "3524",
+                        "endLines": "52",
+                        "endColumns": "12",
+                        "endOffsets": "3669"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Chetan\\.gradle\\caches\\transforms-3\\a36df60b8e600f16cf923ba9ac92e536\\transformed\\appcompat-1.2.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
