@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         main_text = findViewById(R.id.main_text);
-        main_text.setText(currentUser.getEmail());
+        main_text.setText(currentUser.getDisplayName());
 
 //        Toast.makeText(this,db.getReference().child("Eodzh7jM98T8ma2JqVFfLjnbmlo2").getKey(),Toast.LENGTH_LONG).show();
 //        db.getReference().child("Eodzh7jM98T8ma2JqVFfLjnbmlo2").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
@@ -92,8 +93,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.signOut:
                 Toast.makeText(this,"Signed out",Toast.LENGTH_SHORT).show();
                 FirebaseAuth.getInstance().signOut();
+                LoginManager.getInstance().logOut();
 
                 Intent intent = new Intent(this,SignInActivity.class);
+
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
                 Toast.makeText(this,"Signed out",Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
