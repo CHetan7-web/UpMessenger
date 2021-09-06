@@ -1,7 +1,3 @@
-com/example/upmessenger/Models/UpUsers.java
- com.example.upmessenger.Models.UpUsers
-com/example/upmessenger/BuildConfig.java
- com.example.upmessenger.BuildConfig
 com/example/upmessenger/Activity/MainActivity.java
  com.example.upmessenger.Activity.MainActivity
 com/example/upmessenger/Activity/SignUpActivity.java
@@ -18,3 +14,7 @@ com/example/upmessenger/Activity/SignInActivity.java
  com.example.upmessenger.Activity.SignInActivity$2$1
  com.example.upmessenger.Activity.SignInActivity$3
  com.example.upmessenger.Activity.SignInActivity$4
+com/example/upmessenger/BuildConfig.java
+ com.example.upmessenger.BuildConfig
+com/example/upmessenger/Models/UpUsers.java
+ com.example.upmessenger.Models.UpUsers

@@ -1,4 +1,4 @@
-#Sat Sep 04 22:50:20 IST 2021
+#Mon Sep 06 10:40:56 IST 2021
 base.0=F\:\\UpMessenger\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
