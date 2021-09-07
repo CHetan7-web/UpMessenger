@@ -1,0 +1,539 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]" date="1630905136558" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 06/09/2021 10:41 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/MainActivity.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/MainActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/MainActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/androidResources" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity$3.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity$3.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/outputs/apk/debug/app-debug.apk" />
+    <option name="AFTER_PATH" value="app/build/outputs/apk/debug/app-debug.apk" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/app-debug.apk" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/processed_res/debug/out/resources-debug.ap_" />
+    <option name="AFTER_PATH" value="app/build/intermediates/processed_res/debug/out/resources-debug.ap_" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/resources-debug.ap_" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/dex/debug/mergeDexDebug/classes.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/dex/debug/mergeDexDebug/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/classes.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.0.2/javaCompile/javaCompile.lock" />
+    <option name="AFTER_PATH" value=".gradle/7.0.2/javaCompile/javaCompile.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/javaCompile.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-da_values-da.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-da_values-da.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-da_values-da.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-v21_values-v21.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-v21_values-v21.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-v21_values-v21.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/6ffcc9a74579ab15de54edf374f31a65ff151d59eabbdf975fd444a7d6d119e7_3.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-hi_values-hi.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-hi_values-hi.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-hi_values-hi.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-ml_values-ml.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-ml_values-ml.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-ml_values-ml.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.0.2/executionHistory/executionHistory.bin" />
+    <option name="AFTER_PATH" value=".gradle/7.0.2/executionHistory/executionHistory.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/executionHistory.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-en-rGB_values-en-rGB.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-en-rGB_values-en-rGB.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-en-rGB_values-en-rGB.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="AFTER_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/buildOutputCleanup.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" />
+    <option name="AFTER_PATH" value="app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/R.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity$3.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity$3.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity$3.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-nl_values-nl.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-nl_values-nl.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-nl_values-nl.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity$2$1.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity$2$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity$2$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-pa_values-pa.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-pa_values-pa.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-pa_values-pa.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.0.2/javaCompile/taskHistory.bin" />
+    <option name="AFTER_PATH" value=".gradle/7.0.2/javaCompile/taskHistory.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/taskHistory.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/n4TOsTwH+Kra_T7RyhzCR059MWU=" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/n4TOsTwH+Kra_T7RyhzCR059MWU=" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/n4TOsTwH+Kra_T7RyhzCR059MWU=" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity$4.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity$4.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity$4.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity$2.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity$2.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity$2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/merge-state" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/2wvr8L7LCHk45okbwHuKydMsNSA=" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/2wvr8L7LCHk45okbwHuKydMsNSA=" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/2wvr8L7LCHk45okbwHuKydMsNSA=" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-in_values-in.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-in_values-in.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-in_values-in.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-ms_values-ms.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-ms_values-ms.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-ms_values-ms.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-it_values-it.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-it_values-it.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-it_values-it.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/javaResources0" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-tl_values-tl.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-tl_values-tl.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-tl_values-tl.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity$2$1.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity$2$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity$2$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-fr-rCA_values-fr-rCA.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-fr-rCA_values-fr-rCA.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-fr-rCA_values-fr-rCA.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-ta_values-ta.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-ta_values-ta.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-ta_values-ta.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-pt-rPT_values-pt-rPT.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-pt-rPT_values-pt-rPT.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-pt-rPT_values-pt-rPT.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_1/graph.bin" />
+    <option name="AFTER_PATH" value="app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_1/graph.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/graph.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity$1.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-el_values-el.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-el_values-el.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-el_values-el.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-te_values-te.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-te_values-te.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-te_values-te.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity$4.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity$4.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity$4.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_vG+8zj3LINKp48daEubcmkZeMw=" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_vG+8zj3LINKp48daEubcmkZeMw=" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/_vG+8zj3LINKp48daEubcmkZeMw=" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-nb_values-nb.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-nb_values-nb.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-nb_values-nb.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/6ffcc9a74579ab15de54edf374f31a65ff151d59eabbdf975fd444a7d6d119e7_0.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity$1.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-sv_values-sv.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-sv_values-sv.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-sv_values-sv.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-hr_values-hr.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-hr_values-hr.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-hr_values-hr.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-ro_values-ro.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-ro_values-ro.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-ro_values-ro.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.0.2/fileHashes/fileHashes.bin" />
+    <option name="AFTER_PATH" value=".gradle/7.0.2/fileHashes/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/fileHashes.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-zh-rCN_values-zh-rCN.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-zh-rCN_values-zh-rCN.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-zh-rCN_values-zh-rCN.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-fr_values-fr.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-fr_values-fr.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-fr_values-fr.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_3/graph.bin" />
+    <option name="AFTER_PATH" value="app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_3/graph.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/graph1.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/6ffcc9a74579ab15de54edf374f31a65ff151d59eabbdf975fd444a7d6d119e7_2.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-zh-rTW_values-zh-rTW.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-zh-rTW_values-zh-rTW.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-zh-rTW_values-zh-rTW.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/external_libs_dex/debug/mergeExtDexDebug/classes.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/external_libs_dex/debug/mergeExtDexDebug/classes.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/classes1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.0.2/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value=".gradle/7.0.2/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/fileHashes.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values_values.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values_values.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values_values.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-iw_values-iw.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-iw_values-iw.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-iw_values-iw.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-de_values-de.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-de_values-de.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-de_values-de.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-ru_values-ru.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-ru_values-ru.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-ru_values-ru.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-gu_values-gu.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-gu_values-gu.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-gu_values-gu.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-kn_values-kn.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-kn_values-kn.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-kn_values-kn.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-sk_values-sk.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-sk_values-sk.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-sk_values-sk.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.0.2/javaCompile/classAnalysis.bin" />
+    <option name="AFTER_PATH" value=".gradle/7.0.2/javaCompile/classAnalysis.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/classAnalysis.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-fi_values-fi.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-fi_values-fi.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-fi_values-fi.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-ja_values-ja.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-ja_values-ja.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-ja_values-ja.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-pl_values-pl.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-pl_values-pl.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-pl_values-pl.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.0.2/executionHistory/executionHistory.lock" />
+    <option name="AFTER_PATH" value=".gradle/7.0.2/executionHistory/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/executionHistory.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity$2.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity$3.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity$3.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-tr_values-tr.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-tr_values-tr.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-tr_values-tr.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-v23_values-v23.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-v23_values-v23.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-v23_values-v23.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/dex_archive_input_jar_hashes/debug/out" />
+    <option name="AFTER_PATH" value="app/build/intermediates/dex_archive_input_jar_hashes/debug/out" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/out" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity$3.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity$3.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity$3.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity$1.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignUpActivity$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.0.2/javaCompile/jarAnalysis.bin" />
+    <option name="AFTER_PATH" value=".gradle/7.0.2/javaCompile/jarAnalysis.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/jarAnalysis.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_0/graph.bin" />
+    <option name="AFTER_PATH" value="app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_0/graph.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/graph2.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-ko_values-ko.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-ko_values-ko.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-ko_values-ko.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity$1.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/6ffcc9a74579ab15de54edf374f31a65ff151d59eabbdf975fd444a7d6d119e7_1.jar" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-hu_values-hu.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-hu_values-hu.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-hu_values-hu.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/layout_activity_sign_in.xml.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/layout_activity_sign_in.xml.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/layout_activity_sign_in.xml.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/7.0.2/fileHashes/resourceHashesCache.bin" />
+    <option name="AFTER_PATH" value=".gradle/7.0.2/fileHashes/resourceHashesCache.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/resourceHashesCache.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/MainActivity.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/MainActivity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/MainActivity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-th_values-th.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-th_values-th.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-th_values-th.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-bn_values-bn.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-bn_values-bn.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-bn_values-bn.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity$2.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity$2.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity$2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-mr_values-mr.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-mr_values-mr.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-mr_values-mr.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignUpActivity.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignUpActivity.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-cs_values-cs.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-cs_values-cs.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-cs_values-cs.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-pt_values-pt.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-pt_values-pt.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-pt_values-pt.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-zh-rHK_values-zh-rHK.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-zh-rHK_values-zh-rHK.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-zh-rHK_values-zh-rHK.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity$4.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity$4.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity$4.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-es_values-es.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-es_values-es.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-es_values-es.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity$2$1.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity$2$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity$2$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zFBuqbNbOhkX73tmw3RJ8uRz5G0=" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zFBuqbNbOhkX73tmw3RJ8uRz5G0=" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/zFBuqbNbOhkX73tmw3RJ8uRz5G0=" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-vi_values-vi.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-vi_values-vi.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-vi_values-vi.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity$2.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-v24_values-v24.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-v24_values-v24.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-v24_values-v24.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity$2$1.dex" />
+    <option name="AFTER_PATH" value="app/build/intermediates/project_dex_archive/debug/out/com/example/upmessenger/Activity/SignInActivity$2$1.dex" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity$2$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/l+MLg72xgJLygh+BzDAMK+7+RsU=" />
+    <option name="AFTER_PATH" value="app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/l+MLg72xgJLygh+BzDAMK+7+RsU=" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/l+MLg72xgJLygh+BzDAMK+7+RsU=" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_java_res/debug/base.jar" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_java_res/debug/base.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/base.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-af_values-af.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-af_values-af.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-af_values-af.arsc.flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity$4.class" />
+    <option name="AFTER_PATH" value="app/build/intermediates/javac/debug/classes/com/example/upmessenger/Activity/SignInActivity$4.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/SignInActivity$4.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="app/build/intermediates/merged_res/debug/values-ar_values-ar.arsc.flat" />
+    <option name="AFTER_PATH" value="app/build/intermediates/merged_res/debug/values-ar_values-ar.arsc.flat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_09_2021_10_41_[Default_Changelist]/values-ar_values-ar.arsc.flat" />
+  </binary>
+</changelist>

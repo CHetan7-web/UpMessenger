@@ -1063,7 +1063,6 @@ int id browser_actions_menu_item_icon 0x7f070059
 int id browser_actions_menu_item_text 0x7f07005a
 int id browser_actions_menu_items 0x7f07005b
 int id browser_actions_menu_view 0x7f07005c
-int id btnFaceBook 0x7f07005d
 int id btnGoogle 0x7f07005e
 int id btnSignIn 0x7f07005f
 int id btnSignUp 0x7f070060
