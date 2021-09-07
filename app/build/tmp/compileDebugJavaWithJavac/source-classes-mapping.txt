@@ -1,5 +1,7 @@
 com/example/upmessenger/Activity/MainActivity.java
  com.example.upmessenger.Activity.MainActivity
+com/example/upmessenger/Activity/intersection.java
+ com.example.upmessenger.Activity.intersection
 com/example/upmessenger/Activity/SignUpActivity.java
  com.example.upmessenger.Activity.SignUpActivity
  com.example.upmessenger.Activity.SignUpActivity$1
@@ -7,13 +9,17 @@ com/example/upmessenger/Activity/SignUpActivity.java
  com.example.upmessenger.Activity.SignUpActivity$2$1
  com.example.upmessenger.Activity.SignUpActivity$3
  com.example.upmessenger.Activity.SignUpActivity$4
+ com.example.upmessenger.Activity.SignUpActivity$5
+ com.example.upmessenger.Activity.SignUpActivity$6
 com/example/upmessenger/Activity/SignInActivity.java
  com.example.upmessenger.Activity.SignInActivity
  com.example.upmessenger.Activity.SignInActivity$1
  com.example.upmessenger.Activity.SignInActivity$2
- com.example.upmessenger.Activity.SignInActivity$2$1
  com.example.upmessenger.Activity.SignInActivity$3
+ com.example.upmessenger.Activity.SignInActivity$3$1
  com.example.upmessenger.Activity.SignInActivity$4
+ com.example.upmessenger.Activity.SignInActivity$5
+ com.example.upmessenger.Activity.SignInActivity$6
 com/example/upmessenger/BuildConfig.java
  com.example.upmessenger.BuildConfig
 com/example/upmessenger/Models/UpUsers.java

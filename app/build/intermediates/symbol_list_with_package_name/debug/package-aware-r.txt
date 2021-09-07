@@ -1064,7 +1064,6 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
-id btnFaceBook
 id btnGoogle
 id btnSignIn
 id btnSignUp
@@ -1164,6 +1163,7 @@ id line3
 id linear
 id listMode
 id list_item
+id login_button
 id main_text
 id media_actions
 id message
