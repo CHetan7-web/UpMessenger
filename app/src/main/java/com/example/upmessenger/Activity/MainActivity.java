@@ -17,15 +17,12 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.upmessenger.Adapters.FragmentAdapter;
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
-<<<<<<< HEAD
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
-=======
 import com.facebook.login.LoginManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
->>>>>>> auth-messenger
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -69,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
-<<<<<<< HEAD
         viewPager = findViewById(R.id.home_page_viewer);
         viewPager.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
 
@@ -81,10 +77,8 @@ public class MainActivity extends AppCompatActivity {
 
 //        main_text = findViewById(R.id.main_text);
 //        main_text.setText(currentUser.getEmail());
-=======
-        main_text = findViewById(R.id.main_text);
-        main_text.setText(currentUser.getDisplayName());
->>>>>>> auth-messenger
+//        main_text = findViewById(R.id.main_text);
+//        main_text.setText(currentUser.getDisplayName());
 
 //        Toast.makeText(this,db.getReference().child("Eodzh7jM98T8ma2JqVFfLjnbmlo2").getKey(),Toast.LENGTH_LONG).show();
 //        db.getReference().child("Eodzh7jM98T8ma2JqVFfLjnbmlo2").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
