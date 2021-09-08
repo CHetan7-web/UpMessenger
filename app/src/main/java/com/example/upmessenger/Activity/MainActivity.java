@@ -12,9 +12,14 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
+import com.example.upmessenger.Adapters.FragmentAdapter;
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
+//import com.google.android.gms.tasks.OnCompleteListener;
+//import com.google.android.gms.tasks.Task;
+import com.google.android.material.tabs.TabLayout;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -35,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
     FirebaseUser currentUser ;
     FirebaseDatabase db;
     DatabaseReference dbRef;
+
+    TabLayout tabLayout;
+    ViewPager viewPager;
 
     UpUsers UpUser;
 
@@ -58,8 +66,19 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
-        main_text = findViewById(R.id.main_text);
-        main_text.setText(currentUser.getDisplayName());
+        viewPager = findViewById(R.id.home_page_viewer);
+        viewPager.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
+
+        tabLayout = findViewById(R.id.home_tab);
+        tabLayout.setupWithViewPager(viewPager);
+
+
+
+
+//        main_text = findViewById(R.id.main_text);
+//        main_text.setText(currentUser.getEmail());
+//        main_text = findViewById(R.id.main_text);
+//        main_text.setText(currentUser.getDisplayName());
 
 //        Toast.makeText(this,db.getReference().child("Eodzh7jM98T8ma2JqVFfLjnbmlo2").getKey(),Toast.LENGTH_LONG).show();
 //        db.getReference().child("Eodzh7jM98T8ma2JqVFfLjnbmlo2").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
