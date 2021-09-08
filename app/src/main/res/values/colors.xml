@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="facebook">#2F8EED</color>
     <color name="greybackground">#ABAFAF</color>
+    <color name="upMessengerStatusBar">#128C7E</color>
+    <color name="upMessengerColor">#075E54</color>
+
 </resources>

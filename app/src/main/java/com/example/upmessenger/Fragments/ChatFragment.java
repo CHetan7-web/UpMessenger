@@ -10,7 +10,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.upmessenger.Adapters.UserAdapter;
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
 import com.google.firebase.database.DataSnapshot;
@@ -18,6 +21,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 //import com.google.firebase.database.DatabaseReference;
 
 
@@ -27,6 +32,9 @@ public class ChatFragment extends Fragment {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     TextView textView;
+    RecyclerView userRecycler;
+    UserAdapter mUserAdapter;
+    ArrayList<String> users;
 
     public ChatFragment() {
     }
@@ -39,23 +47,36 @@ public class ChatFragment extends Fragment {
         databaseReference = firebaseDatabase.getReference().child("Users");
 
         View view = inflater.inflate(R.layout.fragment_chat,container,false);
-        textView = (TextView) view.findViewById(R.id.chat_text);
-        ProgressDialog Dialog = new ProgressDialog(getContext());
-        Dialog.setMessage("Doing something...");
-        Dialog.show();
+
+        users = new ArrayList<>();
+
+        userRecycler = view.findViewById(R.id.userRecycler);
+        userRecycler.setLayoutManager(new LinearLayoutManager(inflater.getContext()));
+
+        mUserAdapter = new UserAdapter(inflater,inflater.getContext());
+        userRecycler.setAdapter(mUserAdapter);
+
+//        textView = (TextView) view.findViewById(R.id.chat_text);
+//        ProgressDialog Dialog = new ProgressDialog(getContext());
+//        Dialog.setMessage("Doing something...");
+//        Dialog.show();
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                     String text = "";
+                    users.clear();
                     for (DataSnapshot child:snapshot.getChildren()){
-                        UpUsers upUsers = child.getValue(UpUsers.class);
-//                        Log.d("EMAIL",upUsers.getName());
-                        text = text +"\n  "+ upUsers.getName() +" "+upUsers.getEmail();
-                        textView.setText(text);
-
+//                        UpUsers upUsers = child.getValue(UpUsers.class);
+////                        Log.d("EMAIL",upUsers.getName());
+//                        text = text +"\n  "+ upUsers.getName() +" "+upUsers.getEmail();
+//                        textView.setText(text);
+                            Log.d("CHILD_KEY",child.getKey());
+                            users.add(child.getKey());
                     }
-                    Dialog.dismiss();
+                    mUserAdapter.setUsers(users);
+
+//                    Dialog.dismiss();
                 //                UpUsers upuser = snapshot.getValue(UpUsers.class);
 //                Log.d("UPUSER",upuser.getEmail());
 //                text = text + upuser.getName();
