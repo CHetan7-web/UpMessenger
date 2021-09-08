@@ -37,8 +37,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
 
-//    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
-
     implementation platform('com.google.firebase:firebase-bom:28.3.1')
 
     implementation 'com.google.firebase:firebase-auth'
@@ -47,17 +45,12 @@ dependencies {
 
     implementation 'org.jetbrains:annotations:15.0'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.+'
-    //noinspection GradleCompatible
-//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
     implementation 'com.facebook.android:facebook-login:[8,9)'
-
-
+    
 }

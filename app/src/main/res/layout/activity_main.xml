@@ -7,7 +7,6 @@
     android:orientation="vertical"
     tools:context=".Activity.MainActivity">
 
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/home_tab"
         android:layout_width="match_parent"
@@ -18,7 +17,6 @@
         app:tabIndicatorColor="@color/white"
         app:tabSelectedTextColor="#24F13E"
         app:tabTextColor="@color/cardview_light_background"
-
         />
 
     <androidx.viewpager.widget.ViewPager
