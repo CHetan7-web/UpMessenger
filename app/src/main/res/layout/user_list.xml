@@ -18,8 +18,8 @@
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profileImage"
-            android:layout_width="86dp"
-            android:layout_height="86dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:src="@drawable/facebook_icon"
             app:civ_border_width="2dp"
             android:padding="8dp"
@@ -35,15 +35,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/profile_name_part"
+                android:layout_weight="1"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="bottom">
 
                 <TextView
                     android:id="@+id/profileName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="5dp"
+                    android:padding="2dp"
                     android:gravity="left"
                     android:text="User Name"
                     android:textSize="17sp"
@@ -54,7 +55,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/lastTime"
-                    android:padding="5dp"
+                    android:padding="2dp"
+                    android:paddingEnd="5dp"
                     android:gravity="right"
                     android:text="15:00 PM"/>
 
@@ -65,8 +67,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="left|center_vertical"
-                android:padding="5dp"
+                android:gravity="left|top"
+                android:padding="2dp"
                 android:text="User : Last Message"
                 android:maxLines="2"
                 />

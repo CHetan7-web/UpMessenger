@@ -1,6 +1,7 @@
 package com.example.upmessenger.Fragments;
 
 import android.app.ProgressDialog;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,7 +10,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,9 +26,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-//import com.google.firebase.database.DatabaseReference;
-
-
 
 public class ChatFragment extends Fragment {
 
@@ -53,13 +53,16 @@ public class ChatFragment extends Fragment {
         userRecycler = view.findViewById(R.id.userRecycler);
         userRecycler.setLayoutManager(new LinearLayoutManager(inflater.getContext()));
 
+        Drawable mDivider = ContextCompat.getDrawable(getActivity(), R.drawable.divider);
+
+        DividerItemDecoration vItemDecoration = new DividerItemDecoration(userRecycler.getContext(),
+                DividerItemDecoration.VERTICAL);
+        // Set the drawable on it
+        vItemDecoration.setDrawable(mDivider);
+        userRecycler.addItemDecoration(vItemDecoration);
+
         mUserAdapter = new UserAdapter(inflater,inflater.getContext());
         userRecycler.setAdapter(mUserAdapter);
-
-//        textView = (TextView) view.findViewById(R.id.chat_text);
-//        ProgressDialog Dialog = new ProgressDialog(getContext());
-//        Dialog.setMessage("Doing something...");
-//        Dialog.show();
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -89,7 +92,6 @@ public class ChatFragment extends Fragment {
 
             }
         });
-
 
         return view;
     }
