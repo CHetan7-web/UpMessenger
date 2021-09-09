@@ -3,6 +3,21 @@ package com.example.upmessenger.Models;
 public class UpUsers {
     String profilePic,Name,Email,Password,UserId,lastMessage;
 
+    private String lastTime;
+
+    @Override
+    public String toString() {
+        return "UpUsers{" +
+                "profilePic='" + profilePic + '\'' +
+                ", Name='" + Name + '\'' +
+                ", Email='" + Email + '\'' +
+                ", Password='" + Password + '\'' +
+                ", UserId='" + UserId + '\'' +
+                ", lastMessage='" + lastMessage + '\'' +
+                ", lastTime='" + lastTime + '\'' +
+                '}';
+    }
+
     public String getProfilePic() {
         return profilePic;
     }
@@ -17,6 +32,10 @@ public class UpUsers {
 
     public void setName(String name) {
         Name = name;
+    }
+
+    public void setLastTime(String lastTime) {
+        this.lastTime = lastTime;
     }
 
     public String getEmail() {
@@ -66,5 +85,9 @@ public class UpUsers {
         Name = name;
         Email = email;
         Password = password;
+    }
+
+    public String getTime() {
+        return lastTime;
     }
 }

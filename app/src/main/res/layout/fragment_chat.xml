@@ -6,11 +6,11 @@
     tools:context=".Fragments.ChatFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/chat_text"
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#24F13E"
-        android:text="NO chats Yet" />
+        tools:listitem="@layout/user_list"
+        android:id="@+id/userRecycler"/>
 
 </FrameLayout>
