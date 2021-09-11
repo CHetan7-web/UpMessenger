@@ -52,12 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
         db = FirebaseDatabase.getInstance();
         dbRef = db.getReference("Messages");
-        //db.getReference().child("Messages").child("Success").setValue("Granted");
 
         currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        dbRef.child("Success").setValue("Granted");
-        dbRef.child("Failure").setValue("Denied");
 
         if(currentUser == null){
             Intent intent = new Intent(this,SignInActivity.class);
@@ -71,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.home_tab);
         tabLayout.setupWithViewPager(viewPager);
 
-        Toast.makeText(this,currentUser.getEmail(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(this,currentUser.getEmail(),Toast.LENGTH_LONG).show();
 
     }
 

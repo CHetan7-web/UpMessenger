@@ -41,8 +41,7 @@
 
         <activity android:name=".Activity.SignUpActivity"></activity>
         <activity android:name=".Activity.MainActivity"></activity>
-        <activity android:name=".Activity.MessagesActivity" android:parentActivityName=".Activity.MainActivity">
-        </activity>
+        <activity android:name=".Activity.MessagesActivity" android:parentActivityName=".Activity.MainActivity"></activity>
 
     </application>
 

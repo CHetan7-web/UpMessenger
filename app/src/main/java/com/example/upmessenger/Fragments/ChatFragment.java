@@ -21,6 +21,7 @@ import com.example.upmessenger.Activity.MessagesActivity;
 import com.example.upmessenger.Adapters.UserAdapter;
 import com.example.upmessenger.R;
 import com.example.upmessenger.UserOnClick;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -72,12 +73,10 @@ public class ChatFragment extends Fragment implements UserOnClick {
                     String text = "";
                     users.clear();
                     for (DataSnapshot child:snapshot.getChildren()){
-//                        UpUsers upUsers = child.getValue(UpUsers.class);
-////                        Log.d("EMAIL",upUsers.getName());
-//                        text = text +"\n  "+ upUsers.getName() +" "+upUsers.getEmail();
-//                        textView.setText(text);
-                            Log.d("CHILD_KEY",child.getKey());
+                        if (!child.getKey().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
+                            Log.d("CHILD_KEY", child.getKey());
                             users.add(child.getKey());
+                        }
                     }
                     mUserAdapter.setUsers(users);
 

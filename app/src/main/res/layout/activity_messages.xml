@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/backImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +30,7 @@
                 app:srcCompat="@drawable/abc_vector_test" />
 
             <TextView
-                android:id="@+id/chat_message"
+                android:id="@+id/userName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -51,23 +51,23 @@
                 app:civ_border_color="@color/upMessengerStatusBar"
                 app:civ_border_width="2dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/backImage"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/voiceCall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintEnd_toStartOf="@+id/videoCall"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.615"
                 app:srcCompat="@android:drawable/stat_sys_phone_call" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/videoCall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -83,6 +83,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/chatSendMessage"
@@ -98,7 +99,7 @@
         android:layout_margin="5dp">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/message"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -106,10 +107,11 @@
             android:ems="10"
             android:hint="Enter a Message . ."
             android:inputType="textMultiLine|textPersonName"
+            android:paddingStart="14dp"
             android:layout_margin="4dp" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/messageSend"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:padding="3dp"

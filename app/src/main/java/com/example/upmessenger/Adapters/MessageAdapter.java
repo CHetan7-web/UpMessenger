@@ -57,6 +57,12 @@ public class MessageAdapter extends RecyclerView.Adapter {
         }
     }
 
+    public void setChats(ArrayList<UpMesssage> chats) {
+        this.chats = chats;
+        notifyDataSetChanged();
+
+    }
+
     @Override
     public int getItemCount() {
         return chats.size();

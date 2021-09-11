@@ -41,5 +41,11 @@ public class UpMesssage {
         this.time = time;
     }
 
-
+    @Override
+    public String toString() {
+        return "UpMesssage{" +
+                "message='" + message + '\'' +
+                ", time='" + time + '\'' +
+                '}';
+    }
 }
