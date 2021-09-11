@@ -3,15 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UpMessenger/app/src/main/res/drawable/chat_message_edit_text.xml" value="0.2703125" />
+        <entry key="..\:/UpMessenger/app/src/main/res/drawable/chat_reciever.xml" value="0.2703125" />
+        <entry key="..\:/UpMessenger/app/src/main/res/drawable/chat_sender.xml" value="0.2703125" />
+        <entry key="..\:/UpMessenger/app/src/main/res/drawable/divider.xml" value="0.2703125" />
         <entry key="..\:/UpMessenger/app/src/main/res/drawable/google_icon.xml" value="0.2703125" />
         <entry key="..\:/UpMessenger/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="..\:/UpMessenger/app/src/main/res/drawable/logout_img.xml" value="0.2703125" />
+        <entry key="..\:/UpMessenger/app/src/main/res/drawable/message_send.xml" value="0.2703125" />
         <entry key="..\:/UpMessenger/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/UpMessenger/app/src/main/res/layout/activity_messages.xml" value="0.264" />
         <entry key="..\:/UpMessenger/app/src/main/res/layout/activity_sign_in.xml" value="0.25416666666666665" />
         <entry key="..\:/UpMessenger/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/UpMessenger/app/src/main/res/layout/chat_reciever.xml" value="0.6" />
+        <entry key="..\:/UpMessenger/app/src/main/res/layout/chat_sender.xml" value="0.5126582278481012" />
         <entry key="..\:/UpMessenger/app/src/main/res/layout/fragment_chat.xml" value="0.25416666666666665" />
         <entry key="..\:/UpMessenger/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/UpMessenger/app/src/main/res/layout/fragment_status.xml" value="0.24010416666666667" />
+        <entry key="..\:/UpMessenger/app/src/main/res/layout/user_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UpMessenger/app/src/main/res/layout/user_messages.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Chetan/AndroidStudioProjects/UpMessenger/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Chetan/AndroidStudioProjects/UpMessenger/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Chetan/AndroidStudioProjects/UpMessenger/app/src/main/res/menu/signout_menu.xml" value="0.25416666666666665" />

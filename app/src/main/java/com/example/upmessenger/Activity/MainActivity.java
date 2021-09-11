@@ -1,6 +1,5 @@
 package com.example.upmessenger.Activity;
 
-//import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -72,30 +71,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.home_tab);
         tabLayout.setupWithViewPager(viewPager);
 
-
-
-
-//        main_text = findViewById(R.id.main_text);
-//        main_text.setText(currentUser.getEmail());
-//        main_text = findViewById(R.id.main_text);
-//        main_text.setText(currentUser.getDisplayName());
-
-//        Toast.makeText(this,db.getReference().child("Eodzh7jM98T8ma2JqVFfLjnbmlo2").getKey(),Toast.LENGTH_LONG).show();
-//        db.getReference().child("Eodzh7jM98T8ma2JqVFfLjnbmlo2").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                if (!task.isSuccessful()) {
-//                    Log.e("firebase", "Error getting data", task.getException());
-//
-//                }
-////                UpUsers curr = tas
-//                Log.d("firebase", String.valueOf(task.getResult()));
-//
-//            }
-//        });
-
-
-//        Toast.makeText(this,currentUser.getEmail(),Toast.LENGTH_LONG).show();
+        Toast.makeText(this,currentUser.getEmail(),Toast.LENGTH_LONG).show();
 
     }
 

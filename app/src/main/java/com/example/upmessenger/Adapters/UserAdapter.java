@@ -15,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
+import com.example.upmessenger.UserOnClick;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,13 +33,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder>{
     LayoutInflater mLayoutInflater;
     Context mContext;
     ArrayList<String > users;
+    UserOnClick userOnClick;
 
-    public UserAdapter(LayoutInflater mLayoutInflater,Context mContext) {
+    public UserAdapter(LayoutInflater mLayoutInflater,UserOnClick userOnClickInterface,Context mContext) {
         this.mContext = mContext;
         this.mLayoutInflater = mLayoutInflater;
         this.users = new ArrayList<>();
         database = FirebaseDatabase.getInstance();
         usersRef = database.getReference("Users");
+        userOnClick = userOnClickInterface;
     }
 
     @NonNull
@@ -109,6 +112,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder>{
             profileName = itemView.findViewById(R.id.profileName);
 
             profileImage = itemView.findViewById(R.id.profileImage);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    userOnClick.userClick(getAdapterPosition());
+                }
+            });
 
         }
     }

@@ -1,6 +1,6 @@
 package com.example.upmessenger.Fragments;
 
-import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -16,9 +17,10 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.upmessenger.Activity.MessagesActivity;
 import com.example.upmessenger.Adapters.UserAdapter;
-import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
+import com.example.upmessenger.UserOnClick;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,7 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ChatFragment extends Fragment {
+public class ChatFragment extends Fragment implements UserOnClick {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -61,7 +63,7 @@ public class ChatFragment extends Fragment {
         vItemDecoration.setDrawable(mDivider);
         userRecycler.addItemDecoration(vItemDecoration);
 
-        mUserAdapter = new UserAdapter(inflater,inflater.getContext());
+        mUserAdapter = new UserAdapter(inflater, this,inflater.getContext());
         userRecycler.setAdapter(mUserAdapter);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -94,5 +96,19 @@ public class ChatFragment extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void userClick(int postition) {
+
+        Toast.makeText(getContext(),"User Clicked",Toast.LENGTH_SHORT).show();
+
+        String key = users.get(postition);
+
+        Intent chatIntent = new Intent(getActivity(), MessagesActivity.class);
+        chatIntent.putExtra("userKey",key);
+
+        startActivity(chatIntent);
+
     }
 }

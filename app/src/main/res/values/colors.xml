@@ -11,5 +11,6 @@
     <color name="greybackground">#ABAFAF</color>
     <color name="upMessengerStatusBar">#128C7E</color>
     <color name="upMessengerColor">#075E54</color>
-
+    <color name="chatBackground">#959393</color>
+    <color name="chatSender">#dcf8c6</color>
 </resources>
