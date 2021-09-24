@@ -2,20 +2,21 @@ package com.example.upmessenger.Models;
 
 public class UpMesssage {
 
-    String userId,message,time;
+    String userId,message;
+    long time;
 
-    public UpMesssage(String userId, String message, String time) {
+    public UpMesssage(String userId, String message, long time) {
         this.userId = userId;
         this.message = message;
         this.time = time;
     }
 
+    public UpMesssage(){};
+
     public UpMesssage(String userId, String message) {
         this.userId = userId;
         this.message = message;
     }
-
-    public UpMesssage(){}
 
     public String getUserId() {
         return userId;
@@ -33,11 +34,11 @@ public class UpMesssage {
         this.message = message;
     }
 
-    public String getTime() {
+    public long getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(long time) {
         this.time = time;
     }
 

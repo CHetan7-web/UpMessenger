@@ -13,6 +13,8 @@ import com.example.upmessenger.Models.UpMesssage;
 import com.example.upmessenger.R;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class MessageAdapter extends RecyclerView.Adapter {
@@ -24,13 +26,13 @@ public class MessageAdapter extends RecyclerView.Adapter {
     private LayoutInflater mLayoutInflater;
 
     private ArrayList<UpMesssage> chats;
+    DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
 
     public MessageAdapter(Context mContext, LayoutInflater mLayoutInflater) {
         this.mContext = mContext;
         this.mLayoutInflater = mLayoutInflater;
         this.chats = new ArrayList<>();
     }
-
 
     @NonNull
     @Override
@@ -50,10 +52,10 @@ public class MessageAdapter extends RecyclerView.Adapter {
         UpMesssage messsage = chats.get(position);
         if (holder.getClass()==SenderHolder.class){
             ((SenderHolder) holder).senderMessage.setText(messsage.getMessage());
-            ((SenderHolder) holder).senderTime.setText(messsage.getTime());
+            ((SenderHolder) holder).senderTime.setText(dateFormat.format(messsage.getTime()));
         }else{
             ((RecieverHolder)holder).recieverMessage.setText(messsage.getMessage());
-            ((RecieverHolder)holder).recieverTime.setText(messsage.getTime());
+            ((RecieverHolder)holder).recieverTime.setText(dateFormat.format(messsage.getTime()));
         }
     }
 

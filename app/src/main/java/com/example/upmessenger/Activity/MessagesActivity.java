@@ -13,9 +13,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.upmessenger.Adapters.MessageAdapter;
 import com.example.upmessenger.Models.UpMesssage;
+import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -28,18 +32,20 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class MessagesActivity extends AppCompatActivity {
 
     FirebaseUser currUser;
     FirebaseDatabase database;
-    DatabaseReference senderRef,reciverRef;
+    DatabaseReference senderMsgRef,reciverMsgRef,recieverRef,senderRef;
 
     RecyclerView chatsRecycler ;
     MessageAdapter mMessageAdapter;
 
     EditText message;
-    ImageView messageSend;
+    ImageView messageSend,profileImg;
+    TextView profileName;
 
     ArrayList<UpMesssage> chats;
 
@@ -64,10 +70,13 @@ public class MessagesActivity extends AppCompatActivity {
         ReciverSender = reciverId + senderId;
 
         database = FirebaseDatabase.getInstance();
-        senderRef = database.getReference().child("Messages").child(SenderReciever);
-        reciverRef = database.getReference().child("Messages").child(ReciverSender);
 
-        TextView key = findViewById(R.id.userName);
+        senderMsgRef = database.getReference().child("Messages").child(SenderReciever);
+        reciverMsgRef = database.getReference().child("Messages").child(ReciverSender);
+        recieverRef = database.getReference().child("Users").child(reciverId);
+        senderRef = database.getReference().child("Users").child(senderId);
+
+        profileName = findViewById(R.id.profileName);
 
         chatsRecycler = findViewById(R.id.chatRecycler);
         chatsRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
@@ -77,8 +86,30 @@ public class MessagesActivity extends AppCompatActivity {
 
         message = findViewById(R.id.message);
         messageSend =findViewById(R.id.messageSend);
+        profileName = findViewById(R.id.profileName);
+        profileImg = findViewById(R.id.profileImage);
 
-        senderRef.addValueEventListener(new ValueEventListener() {
+        recieverRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                UpUsers upUser = snapshot.getValue(UpUsers.class);
+                if (upUser.getName() != null)
+                    profileName.setText(upUser.getName());
+                if (upUser.getProfilePic() != ""){
+                    Glide.with(getApplicationContext())
+                            .load(upUser.getProfilePic())
+                            .apply(RequestOptions.placeholderOf(R.drawable.ic_launcher_foreground))
+                            .into(profileImg);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        senderMsgRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -104,14 +135,29 @@ public class MessagesActivity extends AppCompatActivity {
                 String msg = message.getText().toString();
                 if (!msg.isEmpty()){
 
+                    HashMap<String,Object> updateUser = new HashMap<>();
+
                     DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
                     Date date = new Date();
 
-                    UpMesssage upMesssage = new UpMesssage(senderId,msg,dateFormat.format(date));
+                    UpMesssage upMesssage = new UpMesssage(senderId,msg,date.getTime());
                     Toast.makeText(getApplicationContext(),upMesssage.toString(),Toast.LENGTH_SHORT).show();
 
-                    senderRef.push().setValue(upMesssage);
-                    reciverRef.push().setValue(upMesssage);
+                    updateUser.put("lastMessage",msg);
+                    updateUser.put("lastTime",date.getTime());
+
+                    senderMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            senderRef.updateChildren(updateUser);
+                        }
+                    });
+                    reciverMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            recieverRef.updateChildren(updateUser);
+                        }
+                    });
 
                     message.getText().clear();
                 }

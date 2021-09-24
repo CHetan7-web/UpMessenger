@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.upmessenger.Activity.MessagesActivity;
 import com.example.upmessenger.Adapters.UserAdapter;
+import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
 import com.example.upmessenger.UserOnClick;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,9 +27,12 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class ChatFragment extends Fragment implements UserOnClick {
 
@@ -67,7 +71,9 @@ public class ChatFragment extends Fragment implements UserOnClick {
         mUserAdapter = new UserAdapter(inflater, this,inflater.getContext());
         userRecycler.setAdapter(mUserAdapter);
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        Query ref = databaseReference.orderByChild("lastTime");
+
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                     String text = "";
@@ -75,16 +81,12 @@ public class ChatFragment extends Fragment implements UserOnClick {
                     for (DataSnapshot child:snapshot.getChildren()){
                         if (!child.getKey().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
                             Log.d("CHILD_KEY", child.getKey());
-                            users.add(child.getKey());
+                            users.add(0,child.getKey());
                         }
                     }
-                    mUserAdapter.setUsers(users);
 
-//                    Dialog.dismiss();
-                //                UpUsers upuser = snapshot.getValue(UpUsers.class);
-//                Log.d("UPUSER",upuser.getEmail());
-//                text = text + upuser.getName();
-//                textView.setText(text);
+                  //  Collections.reverse(users);
+                    mUserAdapter.setUsers(users);
 
             }
 

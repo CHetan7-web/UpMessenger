@@ -23,6 +23,7 @@
         android:minWidth="30dp"
         android:minHeight="4dp"
         android:text="."
+        android:textSize="14dp"
         app:layout_constraintBottom_toTopOf="@+id/reciverTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -45,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="34dp"
+        app:layout_constraintGuide_begin="27dp"
         app:layout_constraintStart_toStartOf="parent" />
 
 

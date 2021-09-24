@@ -30,7 +30,7 @@
                 app:srcCompat="@drawable/abc_vector_test" />
 
             <TextView
-                android:id="@+id/userName"
+                android:id="@+id/profileName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

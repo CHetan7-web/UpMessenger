@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
         currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
-
         if(currentUser == null){
             Intent intent = new Intent(this,SignInActivity.class);
             Toast.makeText(getApplicationContext(),"Please Sign in First !!",Toast.LENGTH_SHORT).show();
@@ -67,8 +66,6 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.home_tab);
         tabLayout.setupWithViewPager(viewPager);
-
-        //Toast.makeText(this,currentUser.getEmail(),Toast.LENGTH_LONG).show();
 
     }
 

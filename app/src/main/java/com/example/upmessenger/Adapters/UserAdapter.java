@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +23,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -56,27 +59,29 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder>{
     public void onBindViewHolder(@NonNull UserHolder holder, int position) {
 
         String userId = users.get(position);
+        DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
 
         usersRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UpUsers upUser = snapshot.getValue(UpUsers.class);
                 Log.d("USER_DATA",upUser.toString());
+
                 if(upUser!=null) {
+
                     if (upUser.getName() != null)
                         holder.profileName.setText(upUser.getName());
 
-                    if (upUser.getEmail() != null)
-                        holder.profileMessage.setText(upUser.getEmail());
+                    if (upUser.getLastMessage() != null)
+                        holder.profileMessage.setText(upUser.getLastMessage());
+                    else
+                        holder.profileMessage.setText("Tap to Message ");
 
-                    if (upUser.getTime() != null)
-                        holder.lastTime.setText(upUser.getTime());
+                    if (upUser.getTime() != 0)
+                        holder.lastTime.setText(dateFormat.format(upUser.getTime()));
 
                     if (upUser.getProfilePic() != null)
                         Glide.with(holder.itemView.getContext()).load(upUser.getProfilePic()).apply(RequestOptions.placeholderOf(R.drawable.ic_launcher_foreground)).into(holder.profileImage);
-                      // holder.profileImage.setImageURI(Uri.parse(upUser.getProfilePic().toString()));
-
-                        // Log.d("IMAGE_URL", upUser.getProfilePic());
 
                 }
             }

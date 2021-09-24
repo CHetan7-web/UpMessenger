@@ -3,7 +3,11 @@ package com.example.upmessenger.Models;
 public class UpUsers {
     String profilePic,Name,Email,Password,UserId,lastMessage;
 
-    private String lastTime;
+    public long getLastTime() {
+        return lastTime;
+    }
+
+    private long lastTime;
 
     @Override
     public String toString() {
@@ -34,7 +38,7 @@ public class UpUsers {
         Name = name;
     }
 
-    public void setLastTime(String lastTime) {
+    public void setLastTime(long lastTime) {
         this.lastTime = lastTime;
     }
 
@@ -87,7 +91,7 @@ public class UpUsers {
         Password = password;
     }
 
-    public String getTime() {
+    public long getTime() {
         return lastTime;
     }
 }
