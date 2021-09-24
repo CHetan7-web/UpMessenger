@@ -1,13 +1,23 @@
 package com.example.upmessenger.Models;
 
 public class UpUsers {
-    String profilePic,Name,Email,Password,UserId,lastMessage;
-
-    public long getLastTime() {
-        return lastTime;
-    }
+    String profilePic;
+    String Name;
+    String Email;
+    String Password;
+    String UserId;
+    String lastMessage;
+    String status;
 
     private long lastTime;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     @Override
     public String toString() {
@@ -20,6 +30,16 @@ public class UpUsers {
                 ", lastMessage='" + lastMessage + '\'' +
                 ", lastTime='" + lastTime + '\'' +
                 '}';
+    }
+
+    public long getTime() { return lastTime; }
+
+    public long getLastTime() {
+        return lastTime;
+    }
+
+    public void setLastTime(long lastTime) {
+        this.lastTime = lastTime;
     }
 
     public String getProfilePic() {
@@ -36,10 +56,6 @@ public class UpUsers {
 
     public void setName(String name) {
         Name = name;
-    }
-
-    public void setLastTime(long lastTime) {
-        this.lastTime = lastTime;
     }
 
     public String getEmail() {
@@ -91,7 +107,4 @@ public class UpUsers {
         Password = password;
     }
 
-    public long getTime() {
-        return lastTime;
-    }
 }
