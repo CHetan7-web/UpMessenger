@@ -11,6 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UpMessenger"
         tools:replace="icon, label">
+        <activity
+            android:name=".Activity.AddUserActivity"
+            android:exported="true"
+            android:noHistory="true"/>
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -24,25 +29,25 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Activity.SignInActivity">
+        <activity android:name=".Activity.SignInActivity"></activity>
+        <activity android:name=".Activity.SignUpActivity" />
+        <activity android:name=".Activity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Activity.SignUpActivity"></activity>
-        <activity android:name=".Activity.MainActivity"></activity>
-        <activity android:name=".Activity.MessagesActivity" android:parentActivityName=".Activity.MainActivity"></activity>
-
+        <activity
+            android:name=".Activity.MessagesActivity"
+            android:parentActivityName=".Activity.MainActivity" />
     </application>
 
 </manifest>

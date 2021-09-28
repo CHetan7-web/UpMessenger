@@ -17,11 +17,13 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.upmessenger.Activity.AddUserActivity;
 import com.example.upmessenger.Activity.MessagesActivity;
 import com.example.upmessenger.Adapters.UserAdapter;
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
 import com.example.upmessenger.UserOnClick;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,6 +38,7 @@ import java.util.Comparator;
 
 public class ChatFragment extends Fragment implements UserOnClick {
 
+    FloatingActionButton addUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     TextView textView;
@@ -51,10 +54,14 @@ public class ChatFragment extends Fragment implements UserOnClick {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference().child("Users");
+        databaseReference = firebaseDatabase.getReference()
+                                    .child("Users-Connected")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
         View view = inflater.inflate(R.layout.fragment_chat,container,false);
 
+        addUser = view.findViewById(R.id.add_user);
+        
         users = new ArrayList<>();
 
         userRecycler = view.findViewById(R.id.userRecycler);
@@ -93,6 +100,14 @@ public class ChatFragment extends Fragment implements UserOnClick {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+
+        addUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addUserIntent = new Intent(getActivity(), AddUserActivity.class);
+                startActivity(addUserIntent);
             }
         });
 

@@ -33,18 +33,19 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 public class MessagesActivity extends AppCompatActivity {
 
     FirebaseUser currUser;
     FirebaseDatabase database;
-    DatabaseReference senderMsgRef,reciverMsgRef,recieverRef,senderRef;
+    DatabaseReference senderMsgRef,reciverMsgRef,recieverRef,senderRef,recieverUsers,senderUsers;
 
     RecyclerView chatsRecycler ;
     MessageAdapter mMessageAdapter;
 
     EditText message;
-    ImageView messageSend,profileImg;
+    ImageView messageSend,profileImg,backImage;
     TextView profileName;
 
     ArrayList<UpMesssage> chats;
@@ -75,6 +76,8 @@ public class MessagesActivity extends AppCompatActivity {
         reciverMsgRef = database.getReference().child("Messages").child(ReciverSender);
         recieverRef = database.getReference().child("Users").child(reciverId);
         senderRef = database.getReference().child("Users").child(senderId);
+        recieverUsers = database.getReference().child("Users-Connected").child(reciverId);
+        senderUsers = database.getReference().child("Users-Connected").child(senderId);
 
         profileName = findViewById(R.id.profileName);
 
@@ -88,6 +91,9 @@ public class MessagesActivity extends AppCompatActivity {
         messageSend =findViewById(R.id.messageSend);
         profileName = findViewById(R.id.profileName);
         profileImg = findViewById(R.id.profileImage);
+        backImage = findViewById(R.id.backImage);
+
+        backImage.setOnClickListener((view)->finish());
 
         recieverRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -135,7 +141,7 @@ public class MessagesActivity extends AppCompatActivity {
                 String msg = message.getText().toString();
                 if (!msg.isEmpty()){
 
-                    HashMap<String,Object> updateUser = new HashMap<>();
+                    HashMap<String,Object> updateUser = new HashMap<>();//,addSender= new HashMap<>(),addReciver= new HashMap<>();
 
                     DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
                     Date date = new Date();
@@ -146,16 +152,21 @@ public class MessagesActivity extends AppCompatActivity {
                     updateUser.put("lastMessage",msg);
                     updateUser.put("lastTime",date.getTime());
 
+//                    addSender.put(senderId,"");
+
                     senderMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
                             senderRef.updateChildren(updateUser);
+                            senderUsers.child(reciverId).child("lastTime").setValue(updateUser.get("lastTime"));
                         }
                     });
+
                     reciverMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
                             recieverRef.updateChildren(updateUser);
+                            recieverUsers.child(senderId).child("lastTime").setValue(updateUser.get("lastTime"));
                         }
                     });
 

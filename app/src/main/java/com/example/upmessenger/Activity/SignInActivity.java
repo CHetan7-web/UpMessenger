@@ -142,6 +142,7 @@ public class SignInActivity extends AppCompatActivity {
                             proDialog.dismiss();
                             if (task.isSuccessful()){
                                 Intent intent = new Intent(SignInActivity.this,MainActivity.class);
+//                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                                 Toast.makeText(getApplicationContext(),"SUCCess",Toast.LENGTH_SHORT).show();
                             }

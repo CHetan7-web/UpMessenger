@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/chatBackground"
+    android:background="@drawable/chats_background"
     tools:context=".Activity.MessagesActivity">
 
     <androidx.appcompat.widget.Toolbar
