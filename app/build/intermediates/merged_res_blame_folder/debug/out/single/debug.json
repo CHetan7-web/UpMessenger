@@ -1,126 +1,138 @@
 [
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_status.xml.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\layout\\fragment_status.xml"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_logout_img.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\logout_img.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_logout_img.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\logout_img.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_logout_img.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\logout_img.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_logout_img.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\logout_img.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_logout_img.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\logout_img.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_logout_img.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\logout_img.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_sign_in.xml.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\layout\\activity_sign_in.xml"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_chat.xml.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\layout\\fragment_chat.xml"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_logout_img.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\logout_img.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_sign_in.xml.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\layout\\activity_sign_in.xml"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_logout_img.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\logout_img.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_logout_img.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\logout_img.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_logout_img.xml.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\logout_img.xml"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile.xml.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\menu_signout_menu.xml.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\menu\\signout_menu.xml"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\menu_signout_menu.xml.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\menu\\signout_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_logout_img.xml.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\logout_img.xml"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_logout_img.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\logout_img.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_logout_img.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\logout_img.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_sign_up.xml.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_logout_img.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\logout_img.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "F:\\UpMessenger\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Chetan\\AndroidStudioProjects\\UpMessenger\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_sign_up.xml.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "F:\\UpMessenger\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "F:\\UpMessenger\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     }
 ]
