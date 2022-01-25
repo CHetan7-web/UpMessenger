@@ -41,7 +41,6 @@ public class ChatFragment extends Fragment implements UserOnClick {
     FloatingActionButton addUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    TextView textView;
     RecyclerView userRecycler;
     UserAdapter mUserAdapter;
     ArrayList<String> users;
@@ -91,10 +90,8 @@ public class ChatFragment extends Fragment implements UserOnClick {
                             users.add(0,child.getKey());
                         }
                     }
-
                   //  Collections.reverse(users);
                     mUserAdapter.setUsers(users);
-
             }
 
             @Override

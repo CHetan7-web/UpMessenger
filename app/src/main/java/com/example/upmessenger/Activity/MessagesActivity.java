@@ -141,7 +141,7 @@ public class MessagesActivity extends AppCompatActivity {
                 String msg = message.getText().toString();
                 if (!msg.isEmpty()){
 
-                    HashMap<String,Object> updateUser = new HashMap<>();//,addSender= new HashMap<>(),addReciver= new HashMap<>();
+                    HashMap<String,Object> updateUser = new HashMap<>();
 
                     DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
                     Date date = new Date();
@@ -151,8 +151,6 @@ public class MessagesActivity extends AppCompatActivity {
 
                     updateUser.put("lastMessage",msg);
                     updateUser.put("lastTime",date.getTime());
-
-//                    addSender.put(senderId,"");
 
                     senderMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -176,4 +174,5 @@ public class MessagesActivity extends AppCompatActivity {
         });
 
     }
+
 }

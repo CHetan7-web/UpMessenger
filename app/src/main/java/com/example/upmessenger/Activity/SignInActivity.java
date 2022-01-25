@@ -134,23 +134,27 @@ public class SignInActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                proDialog.show();
-                mAuth.signInWithEmailAndPassword(etEmail.getText().toString(),etPassword.getText().toString())
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
-                            proDialog.dismiss();
-                            if (task.isSuccessful()){
-                                Intent intent = new Intent(SignInActivity.this,MainActivity.class);
+                if (etEmail.getText().toString().isEmpty() || etPassword.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(),"Email or Password is Empty",Toast.LENGTH_SHORT).show();
+                }
+                else
+                {   proDialog.show();
+                    mAuth.signInWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString())
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
+                                    proDialog.dismiss();
+                                    if (task.isSuccessful()) {
+                                        Intent intent = new Intent(SignInActivity.this, MainActivity.class);
 //                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                startActivity(intent);
-                                Toast.makeText(getApplicationContext(),"SUCCess",Toast.LENGTH_SHORT).show();
-                            }
-                            else {
-                                Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                });
+                                        startActivity(intent);
+                                        Toast.makeText(getApplicationContext(), "SUCCess", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                }
             }
         });
 

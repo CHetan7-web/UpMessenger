@@ -109,30 +109,35 @@ public class SignUpActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (etEmail.getText().toString().isEmpty() || etPassword.getText().toString().isEmpty() || etName.getText().toString().isEmpty())
+                    Toast.makeText(getApplicationContext(),"Name or Email or Password is Empty",Toast.LENGTH_SHORT).show();
+                else
+                {
                 proDialog.show();
-                mAuth.createUserWithEmailAndPassword(etEmail.getText().toString(),etPassword.getText().toString())
+                mAuth.createUserWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString())
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull @org.jetbrains.annotations.NotNull Task<AuthResult> task) {
-                        proDialog.dismiss();
-                        if(task.isSuccessful()){
-                            UpUsers myuser = new UpUsers(etEmail.getText().toString() ,etPassword.getText().toString(),etName.getText().toString());
+                            @Override
+                            public void onComplete(@NonNull @org.jetbrains.annotations.NotNull Task<AuthResult> task) {
+                                proDialog.dismiss();
+                                if (task.isSuccessful()) {
+                                    UpUsers myuser = new UpUsers(etEmail.getText().toString(), etPassword.getText().toString(), etName.getText().toString());
 //                            String id = mAuth.getCurrentUser().getUid();
-                            String id = task.getResult().getUser().getUid();
-                            FirebaseAuth.getInstance().signOut();
+                                    String id = task.getResult().getUser().getUid();
+                                    FirebaseAuth.getInstance().signOut();
 
-                            myRef.child(id).setValue(myuser);
+                                    myRef.child(id).setValue(myuser);
 
-                            Toast.makeText(getApplicationContext(),"Please Sign-In to continue",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Please Sign-In to continue", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(getApplicationContext(),SignInActivity.class);
-                            startActivity(intent);
+                                    Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
+                                    startActivity(intent);
 
-                        }else{
-                            Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                                } else {
+                                    Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                }
             }
         });
 
