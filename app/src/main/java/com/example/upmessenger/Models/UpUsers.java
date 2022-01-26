@@ -8,6 +8,7 @@ public class UpUsers {
     String UserId;
     String lastMessage;
     String status;
+    Boolean isSelected=false;
 
     private long lastTime;
 
@@ -29,6 +30,7 @@ public class UpUsers {
                 ", UserId='" + UserId + '\'' +
                 ", lastMessage='" + lastMessage + '\'' +
                 ", lastTime='" + lastTime + '\'' +
+                ", isSelected='" + isSelected + '\'' +
                 '}';
     }
 
@@ -74,6 +76,14 @@ public class UpUsers {
         Password = password;
     }
 
+    public Boolean getSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(Boolean selected) {
+        isSelected = selected;
+    }
+
     public String getUserId() {
         return UserId;
     }
@@ -96,6 +106,7 @@ public class UpUsers {
         Email = email;
         Password = password;
         UserId = userId;
+        isSelected=false;
         this.lastMessage = lastMessage;
     }
 
@@ -105,6 +116,7 @@ public class UpUsers {
         Name = name;
         Email = email;
         Password = password;
+        isSelected=false;
     }
 
 }
