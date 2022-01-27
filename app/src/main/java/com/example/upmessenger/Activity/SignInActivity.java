@@ -134,27 +134,22 @@ public class SignInActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (etEmail.getText().toString().isEmpty() || etPassword.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(),"Email or Password is Empty",Toast.LENGTH_SHORT).show();
-                }
-                else
-                {   proDialog.show();
-                    mAuth.signInWithEmailAndPassword(etEmail.getText().toString(), etPassword.getText().toString())
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
-                                    proDialog.dismiss();
-                                    if (task.isSuccessful()) {
-                                        Intent intent = new Intent(SignInActivity.this, MainActivity.class);
-//                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                        startActivity(intent);
-                                        Toast.makeText(getApplicationContext(), "SUCCess", Toast.LENGTH_SHORT).show();
-                                    } else {
-                                        Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
-                }
+                proDialog.show();
+                mAuth.signInWithEmailAndPassword(etEmail.getText().toString(),etPassword.getText().toString())
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
+                            proDialog.dismiss();
+                            if (task.isSuccessful()){
+                                Intent intent = new Intent(SignInActivity.this,MainActivity.class);
+                                startActivity(intent);
+                                Toast.makeText(getApplicationContext(),"SUCCess",Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                });
             }
         });
 
@@ -184,11 +179,11 @@ public class SignInActivity extends AppCompatActivity {
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                Log.d("TAG", "firebaseAuthWithGoogle:" + account.getId());
+                Log.d("GOOGLE SIGN IN TAG", "firebaseAuthWithGoogle:" + account.getId());
                 firebaseAuthWithGoogle(account.getIdToken());
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
-                Log.w("TAG", "Google sign in failed", e);
+                Log.w("GOOGLE SIGN IN TAG", "Google sign in failed", e);
             }
         }
     }
@@ -218,7 +213,7 @@ public class SignInActivity extends AppCompatActivity {
 
                         } else {
                             // If sign in fails, display a message to the user.
-                            Log.w("TAG", "signInWithCredential:failure", task.getException());
+                            Log.w("GOOGLE SIGN IN TAG", "signInWithCredential:failure", task.getException());
 //                            updateUI(null);
                         }
                     }
@@ -236,7 +231,7 @@ public class SignInActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d("TAG", "signInWithCredential:success");
+                            Log.d("GOOGLE SIGN IN TAG", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             UpUsers myuser = new UpUsers();
