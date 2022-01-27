@@ -13,6 +13,8 @@ class MessageWithData : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_message_with_data)
 
+        supportActionBar?.hide()
+
         val messageUri : Uri? = intent?.data
         val message : String? = intent?.getStringExtra(Intent.EXTRA_TEXT)
 
