@@ -13,4 +13,5 @@
     <color name="upMessengerColor">#075E54</color>
     <color name="chatBackground">#959393</color>
     <color name="chatSender">#dcf8c6</color>
+    <color name="messageDayHeader">#5F6868</color>
 </resources>

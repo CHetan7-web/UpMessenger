@@ -1,21 +1,25 @@
 package com.example.upmessenger.Activity;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.upmessenger.Adapters.MessageAdapter;
+import com.example.upmessenger.Extras.MessageHeaderItemDecoration;
 import com.example.upmessenger.Models.UpMesssage;
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
@@ -30,9 +34,11 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MessagesActivity extends AppCompatActivity {
@@ -84,8 +90,18 @@ public class MessagesActivity extends AppCompatActivity {
         chatsRecycler = findViewById(R.id.chatRecycler);
         chatsRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
+//        chatsRecycler.addItemDecoration(new RecyclerHeaderItemDecoration(new ));
+
+
         mMessageAdapter = new MessageAdapter(this,this.getLayoutInflater());
         chatsRecycler.setAdapter(mMessageAdapter);
+
+        MessageHeaderItemDecoration messageDayItemDecoration =
+                new MessageHeaderItemDecoration(getResources().getDimensionPixelSize(R.dimen.recycler_section_header_height),
+                        true,
+                        mMessageAdapter);
+
+        chatsRecycler.addItemDecoration(messageDayItemDecoration);
 
         message = findViewById(R.id.message);
         messageSend =findViewById(R.id.messageSend);

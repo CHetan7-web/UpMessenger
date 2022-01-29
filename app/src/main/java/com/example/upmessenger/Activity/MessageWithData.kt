@@ -27,4 +27,5 @@ class MessageWithData : AppCompatActivity() {
                 Log.d("URI CONTEXT","NULL")
         }
     }
+
 }
