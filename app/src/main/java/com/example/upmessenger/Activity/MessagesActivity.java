@@ -171,16 +171,20 @@ public class MessagesActivity extends AppCompatActivity {
                     senderMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
-                            senderRef.updateChildren(updateUser);
-                            senderUsers.child(reciverId).child("lastTime").setValue(updateUser.get("lastTime"));
+                            //We will not use it anymore because last message should reflect only with connected user not all
+//                            senderRef.updateChildren(updateUser);
+//                            senderUsers.child(reciverId).child("lastTime").setValue(updateUser.get("lastTime"));
+                            senderUsers.child(reciverId).updateChildren(updateUser);
                         }
                     });
 
                     reciverMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
-                            recieverRef.updateChildren(updateUser);
-                            recieverUsers.child(senderId).child("lastTime").setValue(updateUser.get("lastTime"));
+                            //We will not use it anymore because last message should reflect only with connected user not all
+//                            recieverRef.updateChildren(updateUser);
+//                            recieverUsers.child(senderId).child("lastTime").setValue(updateUser.get("lastTime"));
+                            senderUsers.child(reciverId).updateChildren(updateUser);
                         }
                     });
 

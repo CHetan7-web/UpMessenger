@@ -134,8 +134,9 @@ public class MessageAdapter extends RecyclerView.Adapter implements MessageHeade
     @Override
     public CharSequence getSectionHeader(int position) {
         Log.d("Day_Header", String.valueOf(position));
+
         DateFormat dateFormat = new SimpleDateFormat("dd MMM ,yyyy");
-        long msgTime = chats.get(position).getTime();
+
         Date msgDate = new Date(dateFormat.format(chats.get(position).getTime()));
         Date todaysDate = new Date(dateFormat.format((new Date()).getTime()));
 

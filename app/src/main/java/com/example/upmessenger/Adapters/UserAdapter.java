@@ -17,6 +17,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
 import com.example.upmessenger.UserOnClick;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,31 +27,35 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder>{
+public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
 
-    FirebaseDatabase database ;
-    DatabaseReference usersRef;
+    FirebaseDatabase database;
+    DatabaseReference usersRef, msgRef;
     LayoutInflater mLayoutInflater;
     Context mContext;
-    ArrayList<String > users;
+    ArrayList<String> users;
     UserOnClick userOnClick;
+    String senderId;
 
-    public UserAdapter(LayoutInflater mLayoutInflater,UserOnClick userOnClickInterface,Context mContext) {
+    public UserAdapter(LayoutInflater mLayoutInflater, UserOnClick userOnClickInterface, Context mContext) {
         this.mContext = mContext;
         this.mLayoutInflater = mLayoutInflater;
         this.users = new ArrayList<>();
         database = FirebaseDatabase.getInstance();
+        senderId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         usersRef = database.getReference("Users");
+        msgRef = database.getReference("Users-Connected").child(senderId);
         userOnClick = userOnClickInterface;
     }
 
     @NonNull
     @Override
     public UserHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = mLayoutInflater.inflate(R.layout.user_list,parent,false);
+        View view = mLayoutInflater.inflate(R.layout.user_list, parent, false);
         UserHolder userHolder = new UserHolder(view);
         return userHolder;
     }
@@ -59,26 +64,27 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder>{
     public void onBindViewHolder(@NonNull UserHolder holder, int position) {
 
         String userId = users.get(position);
-        DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
+//        DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
 
         usersRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UpUsers upUser = snapshot.getValue(UpUsers.class);
-                Log.d("USER_DATA",upUser.toString());
+                Log.d("USER_DATA", upUser.toString());
 
-                if(upUser!=null) {
+                if (upUser != null) {
 
                     if (upUser.getName() != null)
                         holder.profileName.setText(upUser.getName());
 
-                    if (upUser.getLastMessage() != null)
-                        holder.profileMessage.setText(upUser.getLastMessage());
-                    else
-                        holder.profileMessage.setText("Tap to Message ");
-
-                    if (upUser.getTime() != 0)
-                        holder.lastTime.setText(dateFormat.format(upUser.getTime()));
+                    //From Users Connected
+//                    if (upUser.getLastMessage() != null)
+//                        holder.profileMessage.setText(upUser.getLastMessage());
+//                    else
+//                        holder.profileMessage.setText("Tap to Message ");
+//
+//                    if (upUser.getTime() != 0)
+//                        holder.lastTime.setText(dateFormat.format(upUser.getTime()));
 
                     if (upUser.getProfilePic() != null)
                         Glide.with(holder.itemView.getContext()).load(upUser.getProfilePic()).apply(RequestOptions.placeholderOf(R.drawable.ic_launcher_foreground)).into(holder.profileImage);
@@ -92,6 +98,27 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder>{
             }
         });
 
+        msgRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                UpUsers upUser = snapshot.getValue(UpUsers.class);
+                Log.d("USER_Message_DATA", upUser.toString());
+
+                if (upUser.getLastMessage() != null)
+                    holder.profileMessage.setText(upUser.getLastMessage());
+                else
+                    holder.profileMessage.setText("Tap to Message ");
+
+                if (upUser.getTime() != 0)
+                    holder.lastTime.setText(getDateFormated("SHORT", upUser.getTime()));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     @Override
@@ -99,20 +126,39 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder>{
         return users.size();
     }
 
-    public void setUsers(ArrayList<String> users){
+    private String getDateFormated(String formatDate,Long time){
+        DateFormat dateFormat;
+        if (formatDate.equals("SHORT"))
+            dateFormat = DateFormat.getDateInstance(DateFormat.SHORT);
+        else
+            dateFormat = new SimpleDateFormat(formatDate);
+
+        Date msgDate = new Date(dateFormat.format(time));
+        Date todaysDate = new Date(dateFormat.format((new Date()).getTime()));
+
+        if (msgDate.compareTo(todaysDate) == 0)
+            return new SimpleDateFormat("hh:mm a").format(time);
+        else if ((msgDate.getYear()==todaysDate.getYear() )&&( msgDate.getMonth()==todaysDate.getMonth()) && (msgDate.getDate()+1 ==todaysDate.getDate())  )
+            return "YesterDay";
+        else {
+            return dateFormat.format(msgDate);
+        }
+    }
+
+    public void setUsers(ArrayList<String> users) {
         this.users = users;
         notifyDataSetChanged();
     }
 
-    public class UserHolder extends RecyclerView.ViewHolder{
+    public class UserHolder extends RecyclerView.ViewHolder {
 
-        TextView profileName,profileMessage,lastTime;
+        TextView profileName, profileMessage, lastTime;
         CircleImageView profileImage;
 
         public UserHolder(@NonNull View itemView) {
             super(itemView);
 
-            lastTime =  itemView.findViewById(R.id.lastTime);
+            lastTime = itemView.findViewById(R.id.lastTime);
             profileMessage = itemView.findViewById(R.id.profileMessage);
             profileName = itemView.findViewById(R.id.profileName);
 
