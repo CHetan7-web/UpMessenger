@@ -9,8 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="facebook">#2F8EED</color>
     <color name="greybackground">#ABAFAF</color>
-    <color name="upMessengerStatusBar">#128C7E</color>
+    <color name="upMessengerStatusBar">#06A18F</color>
     <color name="upMessengerColor">#075E54</color>
+    <color name="userSelected">#02401E</color>
     <color name="chatBackground">#959393</color>
     <color name="chatSender">#dcf8c6</color>
 </resources>

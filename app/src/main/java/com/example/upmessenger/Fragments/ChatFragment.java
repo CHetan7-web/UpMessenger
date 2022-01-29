@@ -70,6 +70,7 @@ public class ChatFragment extends Fragment implements UserOnClick {
 
         DividerItemDecoration vItemDecoration = new DividerItemDecoration(userRecycler.getContext(),
                 DividerItemDecoration.VERTICAL);
+
         // Set the drawable on it
         vItemDecoration.setDrawable(mDivider);
         userRecycler.addItemDecoration(vItemDecoration);

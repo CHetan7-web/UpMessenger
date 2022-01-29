@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -74,8 +75,10 @@ public class MessagesActivity extends AppCompatActivity {
 
         senderMsgRef = database.getReference().child("Messages").child(SenderReciever);
         reciverMsgRef = database.getReference().child("Messages").child(ReciverSender);
+
         recieverRef = database.getReference().child("Users").child(reciverId);
         senderRef = database.getReference().child("Users").child(senderId);
+
         recieverUsers = database.getReference().child("Users-Connected").child(reciverId);
         senderUsers = database.getReference().child("Users-Connected").child(senderId);
 
@@ -92,6 +95,12 @@ public class MessagesActivity extends AppCompatActivity {
         profileName = findViewById(R.id.profileName);
         profileImg = findViewById(R.id.profileImage);
         backImage = findViewById(R.id.backImage);
+
+        if (intent.hasExtra("SHARED_MESSAGE")){
+            message.setText(intent.getStringExtra("SHARED_MESSAGE").toString());
+            message.requestFocus();
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        }
 
         backImage.setOnClickListener((view)->finish());
 
