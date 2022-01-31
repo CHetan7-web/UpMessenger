@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.upmessenger.Models.UpLastMessage;
 import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
 import com.example.upmessenger.UserOnClick;
@@ -63,8 +64,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
     @Override
     public void onBindViewHolder(@NonNull UserHolder holder, int position) {
 
+        final String[] lastMessage = new String[1];
         String userId = users.get(position);
 //        DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
+        DatabaseReference recieverState = database.getReference("Users-Connected/" + userId + "/" + senderId + "/typing");
 
         usersRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -101,17 +104,47 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
         msgRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                UpUsers upUser = snapshot.getValue(UpUsers.class);
-                Log.d("USER_Message_DATA", upUser.toString());
+                UpLastMessage upLastMessage = snapshot.getValue(UpLastMessage.class);
+                Log.d("USER_Message_DATA", upLastMessage.toString());
 
-                if (upUser.getLastMessage() != null)
-                    holder.profileMessage.setText(upUser.getLastMessage());
-                else
+                if (upLastMessage.getLastMessage() != null) {
+                    lastMessage[0] = upLastMessage.getLastMessage();
+                    holder.profileMessage.setText(upLastMessage.getLastMessage());
+                } else
                     holder.profileMessage.setText("Tap to Message ");
 
-                if (upUser.getTime() != 0)
-                    holder.lastTime.setText(getDateFormated("SHORT", upUser.getTime()));
+                if (upLastMessage.getLastTime() != 0)
+                    holder.lastTime.setText(getDateFormated("SHORT", upLastMessage.getLastTime()));
 
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        recieverState.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Integer isTyping = snapshot.getValue(Integer.class);
+                Log.d("IS_NULL",String.valueOf(isTyping)+" "+(isTyping != null));
+//                if (isTyping != null) {
+//                    Log.d("IS_NULL", "Not Null" + isTyping);
+//                    if (isTyping == 1)
+//                        holder.profileMessage.setText("Typing");
+//                    else {
+//                        holder.profileMessage.setText(lastMessage[0]);
+//                      }
+//                    }
+                if (isTyping != null) {
+                    if (isTyping == 1)
+                        holder.profileMessage.setText("Typing");
+                    else {
+                        holder.profileMessage.setText(lastMessage[0]);
+                    }
+                }
             }
 
             @Override
@@ -126,7 +159,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
         return users.size();
     }
 
-    private String getDateFormated(String formatDate,Long time){
+    private String getDateFormated(String formatDate, Long time) {
         DateFormat dateFormat;
         if (formatDate.equals("SHORT"))
             dateFormat = DateFormat.getDateInstance(DateFormat.SHORT);
@@ -138,7 +171,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
 
         if (msgDate.compareTo(todaysDate) == 0)
             return new SimpleDateFormat("hh:mm a").format(time);
-        else if ((msgDate.getYear()==todaysDate.getYear() )&&( msgDate.getMonth()==todaysDate.getMonth()) && (msgDate.getDate()+1 ==todaysDate.getDate())  )
+        else if ((msgDate.getYear() == todaysDate.getYear()) && (msgDate.getMonth() == todaysDate.getMonth()) && (msgDate.getDate() + 1 == todaysDate.getDate()))
             return "YesterDay";
         else {
             return dateFormat.format(msgDate);

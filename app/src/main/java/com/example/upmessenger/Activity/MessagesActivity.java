@@ -6,9 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,9 +28,13 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.upmessenger.Adapters.MessageAdapter;
 import com.example.upmessenger.Extras.MessageHeaderItemDecoration;
+import com.example.upmessenger.Models.UpLastMessage;
 import com.example.upmessenger.Models.UpMesssage;
 import com.example.upmessenger.Models.UpUsers;
+import com.example.upmessenger.Networks.NetworkUtil;
+import com.example.upmessenger.OnNetworkGone;
 import com.example.upmessenger.R;
+import com.example.upmessenger.UpBroadcastReciever.NetworkChangeReciever;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -40,23 +52,44 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class MessagesActivity extends AppCompatActivity {
+public class MessagesActivity extends AppCompatActivity implements OnNetworkGone {
 
     FirebaseUser currUser;
     FirebaseDatabase database;
-    DatabaseReference senderMsgRef,reciverMsgRef,recieverRef,senderRef,recieverUsers,senderUsers;
+    DatabaseReference senderMsgRef, reciverMsgRef, recieverRef, senderRef, recieverUsers, senderUsers;
 
-    RecyclerView chatsRecycler ;
+    RecyclerView chatsRecycler;
     MessageAdapter mMessageAdapter;
 
+    BroadcastReceiver networkChangeReciever;
+
     EditText message;
-    ImageView messageSend,profileImg,backImage;
-    TextView profileName;
+    ImageView messageSend, profileImg, backImage;
+    TextView profileName, userState;
 
     ArrayList<UpMesssage> chats;
 
-    private String SenderReciever,senderId,reciverId,ReciverSender;
+    HashMap<String, Object> updateUser;
+
+    Integer userStateCode = 0, userRecieverCode = 0;
+
+    private String SenderReciever, senderId, reciverId, ReciverSender;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        registerReceiver(networkChangeReciever, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+        userRecieverCode = 1;
+        senderUsers.child("state").setValue(1);//updateChildren(updateUser);
+        Log.d("USER_STATE_UPDATE", "User State Changed on Reciever : 1");
+
+        setUserOnline();
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,15 +98,18 @@ public class MessagesActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+        updateUser = new HashMap<>();
         chats = new ArrayList<>();
 
         Intent intent = this.getIntent();
         reciverId = intent.getStringExtra("userKey");
 
+        networkChangeReciever = new NetworkChangeReciever();
+
         currUser = FirebaseAuth.getInstance().getCurrentUser();
         senderId = currUser.getUid();
 
-        SenderReciever = senderId + reciverId ;
+        SenderReciever = senderId + reciverId;
         ReciverSender = reciverId + senderId;
 
         database = FirebaseDatabase.getInstance();
@@ -82,18 +118,16 @@ public class MessagesActivity extends AppCompatActivity {
         reciverMsgRef = database.getReference().child("Messages").child(ReciverSender);
         recieverRef = database.getReference().child("Users").child(reciverId);
         senderRef = database.getReference().child("Users").child(senderId);
-        recieverUsers = database.getReference().child("Users-Connected").child(reciverId);
-        senderUsers = database.getReference().child("Users-Connected").child(senderId);
+        recieverUsers = database.getReference().child("Users-Connected").child(reciverId).child(senderId);
+        senderUsers = database.getReference().child("Users-Connected").child(senderId).child(reciverId);
 
         profileName = findViewById(R.id.profileName);
+        userState = findViewById(R.id.userState);
 
         chatsRecycler = findViewById(R.id.chatRecycler);
         chatsRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-//        chatsRecycler.addItemDecoration(new RecyclerHeaderItemDecoration(new ));
-
-
-        mMessageAdapter = new MessageAdapter(this,this.getLayoutInflater());
+        mMessageAdapter = new MessageAdapter(this, this.getLayoutInflater());
         chatsRecycler.setAdapter(mMessageAdapter);
 
         MessageHeaderItemDecoration messageDayItemDecoration =
@@ -104,12 +138,38 @@ public class MessagesActivity extends AppCompatActivity {
         chatsRecycler.addItemDecoration(messageDayItemDecoration);
 
         message = findViewById(R.id.message);
-        messageSend =findViewById(R.id.messageSend);
+        messageSend = findViewById(R.id.messageSend);
         profileName = findViewById(R.id.profileName);
         profileImg = findViewById(R.id.profileImage);
         backImage = findViewById(R.id.backImage);
 
-        backImage.setOnClickListener((view)->finish());
+        backImage.setOnClickListener((view) -> finish());
+
+        recieverUsers.child("Typing").addValueEventListener(new ValueEventListener() {
+            @SuppressLint("ResourceType")
+            @RequiresApi(api = Build.VERSION_CODES.M)
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Integer typingStatus = snapshot.getValue(Integer.class);
+
+                if (typingStatus != null) {
+                    Log.d("USER_TYPING", "Recieved Data " + typingStatus);
+
+                    if (typingStatus == 1) {
+                        userState.setText("Typing..");
+                        userState.setTextColor(getColor(R.color.green));
+                    } else {
+//                        userState.setTextColor(getColor(R.id.tabMode));
+                        userState.setText("");
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         recieverRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -117,11 +177,25 @@ public class MessagesActivity extends AppCompatActivity {
                 UpUsers upUser = snapshot.getValue(UpUsers.class);
                 if (upUser.getName() != null)
                     profileName.setText(upUser.getName());
-                if (upUser.getProfilePic() != ""){
+                if (upUser.getProfilePic() != "") {
                     Glide.with(getApplicationContext())
                             .load(upUser.getProfilePic())
                             .apply(RequestOptions.placeholderOf(R.drawable.ic_launcher_foreground))
                             .into(profileImg);
+                }
+
+                if (upUser.getState() != null) {
+                    if (upUser.getState() == 0) {
+                        userStateCode = 0;
+                        userState.setText("Offline");
+                    } else {
+                        if (userRecieverCode == 1)
+                            userState.setText("OnLine");
+                        else
+                            userState.setText("OnApp");
+
+                        userStateCode = 1;
+                    }
                 }
             }
 
@@ -136,7 +210,7 @@ public class MessagesActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 chats.clear();
-                for (DataSnapshot dataSnapshot:snapshot.getChildren()){
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     UpMesssage msg = dataSnapshot.getValue(UpMesssage.class);
                     chats.add(msg);
                 }
@@ -155,18 +229,18 @@ public class MessagesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String msg = message.getText().toString();
-                if (!msg.isEmpty()){
+                if (!msg.isEmpty()) {
 
-                    HashMap<String,Object> updateUser = new HashMap<>();
+                    updateUser.clear();
 
                     DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
                     Date date = new Date();
 
-                    UpMesssage upMesssage = new UpMesssage(senderId,msg,date.getTime());
-                    Toast.makeText(getApplicationContext(),upMesssage.toString(),Toast.LENGTH_SHORT).show();
+                    UpMesssage upMesssage = new UpMesssage(senderId, msg, date.getTime());
+                    Toast.makeText(getApplicationContext(), upMesssage.toString(), Toast.LENGTH_SHORT).show();
 
-                    updateUser.put("lastMessage",msg);
-                    updateUser.put("lastTime",date.getTime());
+                    updateUser.put("lastMessage", msg);
+                    updateUser.put("lastTime", date.getTime());
 
                     senderMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -174,7 +248,7 @@ public class MessagesActivity extends AppCompatActivity {
                             //We will not use it anymore because last message should reflect only with connected user not all
 //                            senderRef.updateChildren(updateUser);
 //                            senderUsers.child(reciverId).child("lastTime").setValue(updateUser.get("lastTime"));
-                            senderUsers.child(reciverId).updateChildren(updateUser);
+                            senderUsers.updateChildren(updateUser);
                         }
                     });
 
@@ -184,7 +258,7 @@ public class MessagesActivity extends AppCompatActivity {
                             //We will not use it anymore because last message should reflect only with connected user not all
 //                            recieverRef.updateChildren(updateUser);
 //                            recieverUsers.child(senderId).child("lastTime").setValue(updateUser.get("lastTime"));
-                            senderUsers.child(reciverId).updateChildren(updateUser);
+                            recieverUsers.updateChildren(updateUser);
                         }
                     });
 
@@ -193,6 +267,107 @@ public class MessagesActivity extends AppCompatActivity {
             }
         });
 
+        message.addTextChangedListener(new TextWatcher() {
+
+            boolean isTyping = false;
+            String TAG = "USER_TYPING_STATUS";
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            private Timer timer = new Timer();
+            private final long DELAY = 2000; // milliseconds
+
+            @Override
+            public void afterTextChanged(final Editable s) {
+                Log.d("", "");
+                if (!isTyping) {
+                    senderUsers.child("typing").setValue(1);                    // Send notification for start typing event
+                    isTyping = true;
+                }
+                timer.cancel();
+                timer = new Timer();
+                timer.schedule(
+                        new TimerTask() {
+                            @Override
+                            public void run() {
+                                isTyping = false;
+                                senderUsers.child("typing").setValue(0);                                //send notification for stopped typing event
+                            }
+                        },
+                        DELAY
+                );
+            }
+        });
+
     }
+
+    @Override
+    public void setUserOnline() {
+        recieverUsers.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                Log.d("USER_STATE_CHANGED", String.valueOf(snapshot.getChildrenCount()));
+//                for (DataSnapshot snch : snapshot.getChildren()) {
+//                    Log.d("USER_STATE_CHANGED", snch.getKey() + " : " + snch.getValue());//+snch.getValue(String.class));
+//                }
+
+                UpLastMessage upLastMessage = snapshot.getValue(UpLastMessage.class);
+                if (upLastMessage != null) {
+                    Log.d("USER_STATE_CHANGED", String.valueOf(upLastMessage));
+                    if (upLastMessage.getState() != null) {
+                        Log.d("USER_STATE_CHANGED", upLastMessage.getTyping().toString());
+
+                        if (userStateCode == 1 && NetworkUtil.INSTANCE.getConnectivityStatus(getApplicationContext()) != 0) {
+                            if (upLastMessage.getTyping() == 1) {
+                                userState.setText("Typing.. .");
+                            } else {
+                                if (upLastMessage.getState() == 1) {
+                                    userState.setText("onLine");
+                                    userRecieverCode = 1;
+                                } else {
+                                    userRecieverCode = 0;
+                                    userState.setText("onApp");
+                                }
+                            }
+
+                        } else
+                            userState.setText("");
+
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(networkChangeReciever);
+        userRecieverCode = 0;
+        senderUsers.child("state").setValue(0);
+        Log.d("USER_STATE_UPDATE", "User State Changed on Reciever : 0");
+
+    }
+
+
+    @Override
+    public void setUserStatusOffline() {
+        userState.setText("You are Offline !!");
+        Log.d("USER_STATE_UPDATE", "User State Set Offline");
+
+    }
+
 
 }

@@ -208,6 +208,8 @@ public class SignInActivity extends AppCompatActivity {
                             myuser.setEmail(user.getEmail());
                             myuser.setUserId(user.getUid());
                             myuser.setProfilePic(user.getPhotoUrl().toString());
+                            if (user.getDisplayName() != null)
+                                myuser.setName(user.getDisplayName());
 
                             Toast.makeText(getApplicationContext(),"Current id :"+myuser.getUserId(),Toast.LENGTH_LONG).show();
 

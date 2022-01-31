@@ -9,6 +9,7 @@ public class UpUsers {
     String lastMessage;
     String status;
     Integer selected=0;
+    Integer state ;
 
     private long lastTime;
 
@@ -18,6 +19,14 @@ public class UpUsers {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
     }
 
     @Override
@@ -31,6 +40,7 @@ public class UpUsers {
                 ", lastMessage='" + lastMessage + '\'' +
                 ", lastTime='" + lastTime + '\'' +
                 ", isSelected='" + selected + '\'' +
+                ", state='" + state + '\'' +
                 '}';
     }
 

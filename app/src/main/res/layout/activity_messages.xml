@@ -41,7 +41,18 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/profileImage"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.523" />
+                app:layout_constraintVertical_bias="0.23000002" />
+
+            <TextView
+                android:id="@+id/userState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=""
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/profileName"
+                app:layout_constraintStart_toEndOf="@+id/profileImage"
+                />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileImage"
