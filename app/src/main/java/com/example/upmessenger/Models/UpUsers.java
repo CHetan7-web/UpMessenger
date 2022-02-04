@@ -11,6 +11,11 @@ public class UpUsers {
     Integer selected=0;
     Integer state ;
 
+    public static int TYPING = 2;
+    public static int ONAPP = 0;
+    public static int ONLINE = 1;
+    public static int AWAY = 3;
+
     private long lastTime;
 
     public String getStatus() {

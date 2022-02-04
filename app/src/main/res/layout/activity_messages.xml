@@ -97,10 +97,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@id/chatSendMessage"
-        android:layout_below="@id/chatToolbar"
-        tools:listitem="@layout/chat_sender" />
+        android:layout_below="@id/chatToolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"

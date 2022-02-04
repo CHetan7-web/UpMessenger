@@ -8,8 +8,8 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class UpApplication : Application() {
-
-
-
-
+    override fun onCreate() {
+        super.onCreate()
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true)
+    }
 }

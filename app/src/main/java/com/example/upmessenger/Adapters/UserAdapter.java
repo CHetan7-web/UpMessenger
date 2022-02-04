@@ -130,14 +130,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Integer isTyping = snapshot.getValue(Integer.class);
                 Log.d("IS_NULL",String.valueOf(isTyping)+" "+(isTyping != null));
-//                if (isTyping != null) {
-//                    Log.d("IS_NULL", "Not Null" + isTyping);
-//                    if (isTyping == 1)
-//                        holder.profileMessage.setText("Typing");
-//                    else {
-//                        holder.profileMessage.setText(lastMessage[0]);
-//                      }
-//                    }
                 if (isTyping != null) {
                     if (isTyping == 1)
                         holder.profileMessage.setText("Typing");

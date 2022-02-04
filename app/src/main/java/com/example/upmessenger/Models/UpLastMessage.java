@@ -5,6 +5,37 @@ public class UpLastMessage {
     Long lastTime ;
     Integer state=0;
     Integer typing = 0;
+    Long lastMessageSeen ;
+    String msgSenderId;
+
+
+    @Override
+    public String toString() {
+        return "UpLastMessage{" +
+                "lastMessage='" + lastMessage + '\'' +
+                ", lastTime=" + lastTime +
+                ", state=" + state +
+                ", typing=" + typing +
+                ", lastMessageSeen=" + lastMessageSeen +
+                ", msgSenderId='" + msgSenderId + '\'' +
+                '}';
+    }
+
+    public String getMsgSenderId() {
+        return msgSenderId;
+    }
+
+    public void setMsgSenderId(String msgSenderId) {
+        this.msgSenderId = msgSenderId;
+    }
+
+    public Long getLastMessageSeen() {
+        return lastMessageSeen;
+    }
+
+    public void setLastMessageSeen(Long lastMessageSeen) {
+        this.lastMessageSeen = lastMessageSeen;
+    }
 
     public String getLastMessage() {
         return lastMessage;
@@ -49,16 +80,6 @@ public class UpLastMessage {
     public UpLastMessage(String lastMessage, Long time) {
         this.lastMessage = lastMessage;
         this.lastTime = time;
-    }
-
-    @Override
-    public String toString() {
-        return "UpLastMessage{" +
-                "lastMessage='" + lastMessage + '\'' +
-                ", lastTime=" + lastTime +
-                ", state=" + state +
-                ", typing=" + typing +
-                '}';
     }
 
 }

@@ -4,18 +4,42 @@ public class UpMesssage {
 
     String userId,message;
     long time;
+    Integer seen =1;
 
-    public UpMesssage(String userId, String message, long time) {
+    @Override
+    public String toString() {
+        return "UpMesssage{" +
+                "userId='" + userId + '\'' +
+                ", message='" + message + '\'' +
+                ", time=" + time +
+                ", seen=" + seen +
+                '}';
+    }
+
+    public UpMesssage(String userId, String message, long time,Integer seen) {
         this.userId = userId;
         this.message = message;
         this.time = time;
+        this.seen = seen;
     }
 
     public UpMesssage(){};
 
+    public UpMesssage(String userId) {
+        this.userId = userId;
+    }
+
     public UpMesssage(String userId, String message) {
         this.userId = userId;
         this.message = message;
+    }
+
+    public Integer getSeen() {
+        return seen;
+    }
+
+    public void setSeen(Integer seen) {
+        this.seen = seen;
     }
 
     public String getUserId() {
@@ -42,11 +66,4 @@ public class UpMesssage {
         this.time = time;
     }
 
-    @Override
-    public String toString() {
-        return "UpMesssage{" +
-                "message='" + message + '\'' +
-                ", time='" + time + '\'' +
-                '}';
-    }
 }
