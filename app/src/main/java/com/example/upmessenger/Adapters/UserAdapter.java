@@ -35,7 +35,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
 
     FirebaseDatabase database;
-    DatabaseReference usersRef, msgRef;
+    DatabaseReference usersRef, lstMsgRef;
     LayoutInflater mLayoutInflater;
     Context mContext;
     ArrayList<String> users;
@@ -49,7 +49,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
         database = FirebaseDatabase.getInstance();
         senderId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         usersRef = database.getReference("Users");
-        msgRef = database.getReference("Users-Connected").child(senderId);
+        lstMsgRef = database.getReference("Users-Connected").child(senderId);
         userOnClick = userOnClickInterface;
     }
 
@@ -92,6 +92,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
                     if (upUser.getProfilePic() != null)
                         Glide.with(holder.itemView.getContext()).load(upUser.getProfilePic()).apply(RequestOptions.placeholderOf(R.drawable.ic_launcher_foreground)).into(holder.profileImage);
 
+
                 }
             }
 
@@ -101,7 +102,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
             }
         });
 
-        msgRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+        lstMsgRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UpLastMessage upLastMessage = snapshot.getValue(UpLastMessage.class);
@@ -116,6 +117,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
                 if (upLastMessage.getLastTime() != null)
                     holder.lastTime.setText(getDateFormated("SHORT", upLastMessage.getLastTime()));
 
+                if (upLastMessage.getUnReadCount() == 0 )
+                    holder.unreadCount.setVisibility(View.GONE);
+                else {
+                    holder.unreadCount.setVisibility(View.VISIBLE);
+                    holder.unreadCount.setText(upLastMessage.getUnReadCount().toString());
+                }
 
             }
 
@@ -177,7 +184,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
 
     public class UserHolder extends RecyclerView.ViewHolder {
 
-        TextView profileName, profileMessage, lastTime;
+        TextView profileName, profileMessage, lastTime ,unreadCount;
         CircleImageView profileImage;
 
         public UserHolder(@NonNull View itemView) {
@@ -186,6 +193,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
             lastTime = itemView.findViewById(R.id.lastTime);
             profileMessage = itemView.findViewById(R.id.profileMessage);
             profileName = itemView.findViewById(R.id.profileName);
+            unreadCount = itemView.findViewById(R.id.unreadCount);
 
             profileImage = itemView.findViewById(R.id.profileImage);
 

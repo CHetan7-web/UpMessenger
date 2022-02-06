@@ -7,7 +7,7 @@ public class UpLastMessage {
     Integer typing = 0;
     Long lastMessageSeen ;
     String msgSenderId;
-
+    Integer unReadCount = 0;
 
     @Override
     public String toString() {
@@ -18,7 +18,16 @@ public class UpLastMessage {
                 ", typing=" + typing +
                 ", lastMessageSeen=" + lastMessageSeen +
                 ", msgSenderId='" + msgSenderId + '\'' +
+                ", unReadCount=" + unReadCount +
                 '}';
+    }
+
+    public Integer getUnReadCount() {
+        return unReadCount;
+    }
+
+    public void setUnReadCount(Integer unReadCount) {
+        this.unReadCount = unReadCount;
     }
 
     public String getMsgSenderId() {

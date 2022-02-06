@@ -328,54 +328,6 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
 
             }
         };
-        seenListnerMsg = new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Long lastMsgTime = snapshot.getValue(Long.class);
-                Log.d("SEEN_MESSAGES", "lastMessage>lastMsgSeen " + (lastMsgTime > lastMessageSeenTime));
-
-                if (lastMsgTime > lastMessageSeenTime) {
-
-                    senderMsgRef.orderByChild("time").startAfter(lastMessageSeenTime).addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            Log.d("SEEN_MESSAGES", "Got Unread Messages count : " + snapshot.getChildrenCount());
-                            for (DataSnapshot snp : snapshot.getChildren()) {
-                                UpMesssage upMesssage = snp.getValue(UpMesssage.class);
-                                Log.d("SEEN_MESSAGES", upMesssage.getMessage());
-                                reciverMsgRef.orderByChild("time").equalTo(upMesssage.getTime()).addValueEventListener(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        for (DataSnapshot snp1 : snapshot.getChildren()) {
-                                            Log.d("SEEN_MESSAGES", "Changing Seen State");
-                                            snp1.getRef().child("seen").setValue(1);
-                                        }
-                                        snapshot.getRef().removeEventListener(this);
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError error) {
-
-                                    }
-                                });
-                            }
-                            snapshot.getRef().removeEventListener(this);
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        };
 
         profileName = findViewById(R.id.profileName);
         userState = findViewById(R.id.userState);
@@ -517,10 +469,25 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
 //                            recieverRef.updateChildren(updateUser);
 //                            recieverUsers.child(senderId).child("lastTime").setValue(updateUser.get("lastTime"));
 //                            updateUser.put("seen",1);
+                            recieverUsers.child("unReadCount").addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    Integer count = snapshot.getValue(Integer.class);
+                                    snapshot.getRef().setValue(count==null?0:count + 1);
+
+                                    snapshot.getRef().removeEventListener(this);
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
                             recieverUsers.updateChildren(updateUser);
 
                         }
                     });
+
 
                     message.getText().clear();
                 }
@@ -581,6 +548,7 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         senderUsers.child("state").setValue(0);
         Log.d("USER_STATE_UPDATE", "User State Changed on Reciever : 0");
 
+        senderUsers.child("unReadCount").setValue(0);
         senderUsers.child("lastMessageSeen").setValue(chats.get(chats.size() - 1).getTime());
     }
 
@@ -609,6 +577,8 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         userRecieverCode = 0;
         senderUsers.child("state").setValue(0);
         Log.d("USER_STATE_UPDATE", "User State Changed on Reciever : 0");
+
+        senderUsers.child("unReadCount").setValue(0);
 
         if (chats.size() != 0)
             senderUsers.child("lastMessageSeen").setValue(chats.get(chats.size() - 1).getTime());
