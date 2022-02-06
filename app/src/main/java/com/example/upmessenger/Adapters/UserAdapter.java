@@ -113,7 +113,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
                 } else
                     holder.profileMessage.setText("Tap to Message ");
 
-                if (upLastMessage.getLastTime() != 0)
+                if (upLastMessage.getLastTime() != null)
                     holder.lastTime.setText(getDateFormated("SHORT", upLastMessage.getLastTime()));
 
 

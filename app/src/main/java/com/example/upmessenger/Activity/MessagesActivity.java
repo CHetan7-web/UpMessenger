@@ -88,13 +88,15 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
     Boolean lastSeenHeader = false;
 
     private String SenderReciever, senderId, reciverId, ReciverSender;
-    private Date previousDate = new Date();
+    private Date previousDate;//= new Date();
     private String prevHeader;
     private String lastMsgID;
 
     private long lastMessageSeenTime;
     private ValueEventListener seenListner, seenListnerMsg;
     private boolean onPaused;
+    private String previousMsg;
+    private SimpleDateFormat dateFormat;
 
     @Override
     protected void onResume() {
@@ -122,33 +124,35 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 UpLastMessage upLastMessage = snapshot.getValue(UpLastMessage.class);
-
-                if (upLastMessage.getMsgSenderId() != null)
-                    lastMsgID = upLastMessage.getMsgSenderId();
-
                 if (upLastMessage != null) {
-                    Log.d("USER_STATE_CHANGED", String.valueOf(upLastMessage));
-                    lastMessageSeenTime = upLastMessage.getLastMessageSeen();
-                    if (upLastMessage.getState() != null) {
-                        Log.d("USER_STATE_CHANGED", upLastMessage.getTyping().toString());
+                    if (upLastMessage.getMsgSenderId() != null)
+                        lastMsgID = upLastMessage.getMsgSenderId();
 
-                        if (userStateCode == 1 && NetworkUtil.INSTANCE.getConnectivityStatus(getApplicationContext()) != 0) {
-                            if (upLastMessage.getTyping() == 1) {
-                                userState.setText("Typing.. .");
-                            } else {
-                                if (upLastMessage.getState() == 1) {
-                                    userState.setText("onLine");
-//                                    senderUsers.child("lastTime").addValueEventListener(seenListner);
-                                    userRecieverCode = 1;
+                    if (upLastMessage != null) {
+                        Log.d("USER_STATE_CHANGED", String.valueOf(upLastMessage));
+                        if (upLastMessage.getLastMessageSeen() != null)
+                            lastMessageSeenTime = upLastMessage.getLastMessageSeen();
+                        if (upLastMessage.getState() != null) {
+                            Log.d("USER_STATE_CHANGED", upLastMessage.getTyping().toString());
+
+                            if (userStateCode == 1 && NetworkUtil.INSTANCE.getConnectivityStatus(getApplicationContext()) != 0) {
+                                if (upLastMessage.getTyping() == 1) {
+                                    userState.setText("Typing.. .");
                                 } else {
-                                    userRecieverCode = 0;
-                                    userState.setText("onApp");
+                                    if (upLastMessage.getState() == 1) {
+                                        userState.setText("onLine");
+//                                    senderUsers.child("lastTime").addValueEventListener(seenListner);
+                                        userRecieverCode = 1;
+                                    } else {
+                                        userRecieverCode = 0;
+                                        userState.setText("onApp");
+                                    }
                                 }
-                            }
 
-                        } else
-                            userState.setText("");
+                            } else
+                                userState.setText("");
 
+                        }
                     }
                 }
             }
@@ -165,52 +169,60 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Long lastSeen = snapshot.getValue(Long.class);
 //                lastSeenTime = upLastMessage.getLastMessageSeen();
-                lastMessageSeenTime = lastSeen;
-                lastSeenFound = false;
-                lastSeenTime = lastSeen;
+                if (lastSeen != null) {
+                    lastMessageSeenTime = lastSeen;
+                    lastSeenFound = false;
+                    lastSeenTime = lastSeen;
 
-                senderMsgRef.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        int pos = -1;
-                        chats.clear();
-                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                            UpMesssage msg = dataSnapshot.getValue(UpMesssage.class);
+                    senderMsgRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            int pos = -1;
+                            chats.clear();
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                                UpMesssage msg = dataSnapshot.getValue(UpMesssage.class);
 
-                            Log.d("DAY_HEADER_MSG", "position " + chats.size() + " " + msg.getTime() + " > " + lastSeenTime + " " + (msg.getTime() > lastSeenTime) + " " + (msg.getUserId() == reciverId));
-                            Log.d("DAY_HEADER_MSG", String.valueOf(lastSeenFound));
+                                Log.d("DAY_HEADER_MSG", "position " + chats.size() + " " + msg.getTime() + " > " + lastSeenTime + " " + (msg.getTime() > lastSeenTime) + " " + (msg.getUserId() == reciverId));
+                                Log.d("DAY_HEADER_MSG", String.valueOf(lastSeenFound));
 
-                            if (lastSeenFound == false && lastSeenTime != 0 && msg.getTime() > lastSeenTime && (lastMsgID.equals(reciverId))) {
-                                pos = chats.size();
-                                Log.d("DAY_HEADER_MSG", "position " + chats.size() + " Unread Message Found");
-                                chats.add(new UpMesssage("UnreadMessage"));
-                                lastSeenFound = true;
+                                if (lastSeenFound == false && lastSeenTime != 0 && msg.getTime() > lastSeenTime && (lastMsgID.equals(reciverId))) {
+                                    pos = chats.size();
+                                    Log.d("DAY_HEADER_MSG", "position " + chats.size() + " Unread Message Found");
+                                    chats.add(new UpMesssage("UnreadMessage"));
+                                    lastSeenFound = true;
+                                }
+                                chats.add(msg);
+
                             }
-                            chats.add(msg);
-
-                        }
 //                        lastMessageSeenTime=chats.get(chats.size()-1).getTime();
-                        lastSeenFound = false;
-                        mMessageAdapter.setChats(chats);
-                        if (lastSeenFound == true)
-                            chatsRecycler.scrollToPosition(pos + 1);
-                        else
-                            chatsRecycler.scrollToPosition(chats.size() - 1);
+                            lastSeenFound = false;
+                            if (chats.size() != 0)
+                                previousDate = new Date(dateFormat.format(chats.get(0).getTime()));
+                            mMessageAdapter.setChats(chats);
+                            if (lastSeenFound == true)
+                                chatsRecycler.scrollToPosition(pos + 1);
+                            else
+                                chatsRecycler.scrollToPosition(chats.size() - 1);
 
-                        Log.d("SEEN_MESSAGES", "onResumed == false " + (onResumed == false) + " onPaused == false " + (onPaused == false));
-                        if (onResumed == false && onPaused == false) {
-                            Log.d("SEEN_MESSAGES", "Through msgs added");
-                            recieverUsers.child("lastTime").addValueEventListener(seenListner);
+//                            int i=0;
+//                            for(UpMesssage dumMsg:chats)
+//                                Log.d("CHATS_CHECK",dumMsg.getMessage()+" "+i++);
+
+                            Log.d("SEEN_MESSAGES", "onResumed == false " + (onResumed == false) + " onPaused == false " + (onPaused == false));
+                            if (onResumed == false && onPaused == false) {
+                                Log.d("SEEN_MESSAGES", "Through msgs added");
+                                recieverUsers.child("lastTime").addValueEventListener(seenListner);
+                            }
+
                         }
 
-                    }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+                        }
+                    });
 
-                    }
-                });
-
+                }
             }
 
             @Override
@@ -268,44 +280,46 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (onPaused == false) {
                     Long lastMsgTime = snapshot.getValue(Long.class);
-                    Log.d("SEEN_MESSAGES", "lastMessage>lastMsgSeen " + (lastMsgTime > lastMessageSeenTime));
+                    if (lastMsgTime != null) {
+                        Log.d("SEEN_MESSAGES", "lastMessage>lastMsgSeen " + (lastMsgTime > lastMessageSeenTime));
 
-                    if (lastMsgTime > lastMessageSeenTime) {
+                        if (lastMsgTime > lastMessageSeenTime) {
 
-                        senderMsgRef.orderByChild("time").startAfter(lastMessageSeenTime).addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                Log.d("SEEN_MESSAGES", "Got Unread Messages count : " + snapshot.getChildrenCount());
-                                for (DataSnapshot snp : snapshot.getChildren()) {
-                                    UpMesssage upMesssage = snp.getValue(UpMesssage.class);
-                                    Log.d("SEEN_MESSAGES", upMesssage.getMessage());
-                                    reciverMsgRef.orderByChild("time").equalTo(upMesssage.getTime()).addValueEventListener(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                            for (DataSnapshot snp1 : snapshot.getChildren()) {
-                                                Log.d("SEEN_MESSAGES", "Changing Seen State");
-                                                snp1.getRef().child("seen").setValue(1);
+                            senderMsgRef.orderByChild("time").startAfter(lastMessageSeenTime).addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    Log.d("SEEN_MESSAGES", "Got Unread Messages count : " + snapshot.getChildrenCount());
+                                    for (DataSnapshot snp : snapshot.getChildren()) {
+                                        UpMesssage upMesssage = snp.getValue(UpMesssage.class);
+                                        Log.d("SEEN_MESSAGES", upMesssage.getMessage());
+                                        reciverMsgRef.orderByChild("time").equalTo(upMesssage.getTime()).addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                for (DataSnapshot snp1 : snapshot.getChildren()) {
+                                                    Log.d("SEEN_MESSAGES", "Changing Seen State");
+                                                    snp1.getRef().child("seen").setValue(1);
+                                                }
+                                                snapshot.getRef().removeEventListener(this);
                                             }
-                                            snapshot.getRef().removeEventListener(this);
-                                        }
 
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError error) {
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
 
-                                        }
-                                    });
+                                            }
+                                        });
+                                    }
+                                    snapshot.getRef().removeEventListener(this);
                                 }
-                                snapshot.getRef().removeEventListener(this);
-                            }
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
 
-                            }
-                        });
+                                }
+                            });
 
+                        }
+                        snapshot.getRef().removeEventListener(this);
                     }
-                    snapshot.getRef().removeEventListener(this);
                 }
             }
 
@@ -384,6 +398,8 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         profileName = findViewById(R.id.profileName);
         profileImg = findViewById(R.id.profileImage);
         backImage = findViewById(R.id.backImage);
+
+        dateFormat = new SimpleDateFormat("dd MMM , yyyy");
 
         backImage.setOnClickListener((view) -> finish());
 
@@ -594,7 +610,8 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         senderUsers.child("state").setValue(0);
         Log.d("USER_STATE_UPDATE", "User State Changed on Reciever : 0");
 
-        senderUsers.child("lastMessageSeen").setValue(chats.get(chats.size() - 1).getTime());
+        if (chats.size() != 0)
+            senderUsers.child("lastMessageSeen").setValue(chats.get(chats.size() - 1).getTime());
 
     }
 
@@ -604,48 +621,36 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         Log.d("USER_STATE_UPDATE", "User State Set Offline");
     }
 
-    @Override
-    public boolean isSection(int position) {
-//        Log.d("Day_Header_is_Section", String.valueOf(position));
+    private Date getPreviousDate(int position) {
         DateFormat dateFormat = new SimpleDateFormat("dd MMM , yyyy");
+        if (position == 0)
+            return new Date(dateFormat.format(chats.get(position).getTime()));
+        if (chats.get(position - 1).getUserId().equals("UnreadMessage"))
+            return getPreviousDate(position - 1);
 
-        if (chats.get(position).getUserId().equals("UnreadMessage"))
-            return false;
-
-//        if (lastSeenFound == false && 1643635076198l < lastSeenTime ){
-//            chatsRecycler.scrollToPosition(position);
-//            lastSeenFound = true;
-//            lastSeenHeader = false;
-//            return true;
-//        }
-
-        Date msgDate = new Date(dateFormat.format(chats.get(position).getTime()));
-        //  Date prvDate = new Date(dateFormat.format(chats.get(position-1).getTime()));
-
-        if (position == 0) {
-            previousDate = msgDate;
-            return true;
-        }
-
-        boolean result = msgDate.compareTo(previousDate) != 0;
-        previousDate = msgDate;
-
-        return result;
-
+        return new Date(dateFormat.format(chats.get(position - 1).getTime()));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public CharSequence getSectionHeader(int position) {
-        String header;//= new String();
-        if (chats.get(position).getUserId().equals("UnreadMessage")) {
-            Log.d("DAY_HEADER", position + " " + chats.get(position).getMessage());
+        Date msgDate;
+        if (position == chats.size())
             return prevHeader;
+        Log.d("SECTION_NAME_HEADER", "Position : " + position + " Msg " + chats.get(position).getMessage());
+        String header;//= new String();
+        msgDate = new Date(dateFormat.format(chats.get(position).getTime()));
 
+        if (chats.get(position).getUserId().equals("UnreadMessage")) {
+            if (position == 0)
+                msgDate = new Date(dateFormat.format(chats.get(position + 1).getTime()));
+            else
+                msgDate = new Date(dateFormat.format(chats.get(position - 1).getTime()));
+            Log.d("SECTION_NAME", position + " " + chats.get(position).getMessage());
+//            return prevHeader;
         }
-        DateFormat dateFormat = new SimpleDateFormat("dd MMM , yyyy");
+//        DateFormat dateFormat = new SimpleDateFormat("dd MMM , yyyy");
 
-        Date msgDate = new Date(dateFormat.format(chats.get(position).getTime()));
         Date todaysDate = new Date(dateFormat.format((new Date()).getTime()));
 
         if (msgDate.compareTo(todaysDate) == 0)
@@ -656,7 +661,27 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
             header = dateFormat.format(msgDate);
 
         prevHeader = header;
-        Log.d("DAY_HEADER", header + " Pos : " + position + " " + chats.get(position).getMessage());
+        //  Log.d("SECTION_NAME", header + " Pos : " + position + " " + chats.get(position).getMessage());
         return header;
+    }
+
+    @Override
+    public boolean isSection(int position) {
+        Log.d("Day_Header_is_Section", String.valueOf(position));
+        DateFormat dateFormat = new SimpleDateFormat("dd MMM ,yyyy");
+
+        Date msgDate = new Date(dateFormat.format(chats.get(position).getTime()));
+
+        if (chats.get(position).getUserId().equals("UnreadMessage"))
+            return false;
+
+        if (position == 0)
+            return true;
+
+        Date prvDate = getPreviousDate(position);
+
+        boolean result = msgDate.compareTo(prvDate) != 0;
+        return result;
+
     }
 }
