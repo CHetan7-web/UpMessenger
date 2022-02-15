@@ -3,20 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.upmessenger">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"></uses-permission>
     <application
+        android:name=".Application.UpApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UpMessenger"
+        android:usesCleartextTraffic="true"
         tools:replace="icon, label">
+
         <receiver
             android:name=".UpBroadcastReciever.NetworkChangeReciever"
             android:enabled="false"
             android:exported="false">
-
         </receiver>
+
+        <receiver
+            android:name=".UpBroadcastReciever.ConnectivityReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".Service.NotificationService"
+            android:exported="true"
+            android:enabled="true"
+            android:stopWithTask="false"/>
+
+        <service
+            android:name=".Service.UpMessageService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+<!--                <action android:name="com.google.firebase.A"/>-->
+            </intent-filter>
+        </service>
 
         <activity
             android:name=".Activity.MessageWithData"

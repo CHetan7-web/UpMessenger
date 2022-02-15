@@ -7,6 +7,19 @@ import androidx.collection.ArraySet;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+
+
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -47,6 +60,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 
+import org.chromium.net.HttpUtil;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -57,6 +74,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MessagesActivity extends AppCompatActivity implements OnNetworkGone, MessageHeaderItemDecoration.SectionCallback {
 
@@ -70,6 +89,8 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
     UnReadMessageAdapter mUnreadMessageAdapter;
 
     BroadcastReceiver networkChangeReciever;
+
+    public static final String SERVER_URL = "http://stormbreaker107.pythonanywhere.com/singleMessage";
 
     EditText message;
     ImageView messageSend, profileImg, backImage;
@@ -97,6 +118,7 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
     private boolean onPaused;
     private String previousMsg;
     private SimpleDateFormat dateFormat;
+    private String reciverDeviceToken;
 
     @Override
     protected void onResume() {
@@ -296,7 +318,7 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                                 for (DataSnapshot snp1 : snapshot.getChildren()) {
-                                                    Log.d("SEEN_MESSAGES", "Changing Seen State");
+                                                    Log.d("SEEN_MESSAGES", "Changing to Seen State");
                                                     snp1.getRef().child("seen").setValue(1);
                                                 }
                                                 snapshot.getRef().removeEventListener(this);
@@ -411,6 +433,9 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                     }
                 }
 
+                if (upUser.getDeviceToken() != null)
+                    reciverDeviceToken = upUser.getDeviceToken();
+
             }
 
             @Override
@@ -446,6 +471,7 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
 //                            senderMsgRef.push().setValue(upMesssage);
 //                        }
 //                    });
+
                     lastMsgID = senderId;
 
                     senderMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -457,6 +483,27 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                             updateUser.put("lastMessageSeen", updateUser.get("lastTime"));
                             senderUsers.updateChildren(updateUser);
                             updateUser.remove("lastMessageSeen");
+
+                            if (reciverDeviceToken != null && !reciverDeviceToken.equals("empty") && userRecieverCode==0){
+                                sendMsgToServer(SERVER_URL,reciverDeviceToken);
+                                senderMsgRef.orderByKey().limitToLast(1).addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        //Message Send
+                                        for (DataSnapshot snp:snapshot.getChildren()) {
+                                            snp.getRef().child("seen").setValue(3);
+                                            Log.d("SEEN_MESSAGES","Changing state to Send");
+                                        }
+                                        snapshot.getRef().removeEventListener(this);
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                    }
+                                });
+                            }
+
                         }
                     });
 
@@ -476,7 +523,8 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                                     snapshot.getRef().setValue(count==null?0:count + 1);
 
                                     snapshot.getRef().removeEventListener(this);
-                                }
+
+                                    }
 
                                 @Override
                                 public void onCancelled(@NonNull DatabaseError error) {
@@ -557,6 +605,7 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         super.onStop();
         onPaused = true;
         onResumed = false;
+        userRecieverCode = 0;
 
         Log.d("SEEN_MESSAGES", "On Paused True");
 
@@ -654,4 +703,48 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         return result;
 
     }
+
+    private void sendMsgToServer(String url,String deviceToken){
+        OkHttpClient client = new OkHttpClient();
+
+        RequestBody formBody = new FormBody.Builder()
+                .add("device_token", deviceToken)
+                .add("key2", "value2")  //optional
+//                .add("key3", "value3")  //optional
+//                .add("key4", "value4")  //optional
+                .build();
+
+        Request request = null;
+
+        try {
+            request = new Request.Builder()
+                    .url(url)   //URL
+                    .addHeader("Content-Type", "application/json")
+                    .post(RequestBody.create(
+                            MediaType.parse("application/json; charset=utf-8"),
+                            new JSONObject().put("device_token", deviceToken).toString()))
+                    .build();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                Log.d("API_RESPONSE",e.toString());
+                e.getStackTrace();
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                if(response.isSuccessful()){
+                    ResponseBody responseBody = response.body();
+                    Log.e("API_RESPONSE", responseBody.string());
+                }else
+                    Log.e("API_RESPONSE", response.toString());
+            }
+
+    });
+}
+
 }

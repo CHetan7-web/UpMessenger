@@ -10,6 +10,7 @@ public class UpUsers {
     String status;
     Integer selected=0;
     Integer state ;
+    String deviceToken="empty";
 
     public static int TYPING = 2;
     public static int ONAPP = 0;
@@ -17,6 +18,14 @@ public class UpUsers {
     public static int AWAY = 3;
 
     private long lastTime;
+
+    public String getDeviceToken() {
+        return deviceToken;
+    }
+
+    public void setDeviceToken(String deviceToken) {
+        this.deviceToken = deviceToken;
+    }
 
     public String getStatus() {
         return status;
@@ -43,9 +52,11 @@ public class UpUsers {
                 ", Password='" + Password + '\'' +
                 ", UserId='" + UserId + '\'' +
                 ", lastMessage='" + lastMessage + '\'' +
-                ", lastTime='" + lastTime + '\'' +
-                ", isSelected='" + selected + '\'' +
-                ", state='" + state + '\'' +
+                ", status='" + status + '\'' +
+                ", selected=" + selected +
+                ", state=" + state +
+                ", deviceToken='" + deviceToken + '\'' +
+                ", lastTime=" + lastTime +
                 '}';
     }
 

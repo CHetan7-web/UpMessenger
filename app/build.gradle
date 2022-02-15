@@ -52,11 +52,19 @@ dependencies {
     implementation 'org.jetbrains:annotations:15.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.firebase:firebase-common-ktx:20.0.0'
+    //FCM
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.0'
+    implementation 'org.chromium.net:cronet-embedded:76.3809.111'
+//    implementation 'com.google.firebase:firebase-common-ktx:20.0.0'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    //okhttp Client
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+
+    //Facebook
     implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
     implementation 'com.facebook.android:facebook-login:[8,9)'
 
@@ -67,11 +75,13 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     //MultiDex
     implementation 'com.android.support:multidex:2.0.1'
-    implementation "androidx.core:core-ktx:+"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    implementation "com.google.firebase:firebase-database-ktx:$kotlin_version"
+//    implementation "androidx.core:core-ktx:+"
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+//    implementation "com.google.firebase:firebase-database-ktx:$kotlin_version"
+
+    //Admin Sdk firebase
 
 }
 repositories {

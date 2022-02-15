@@ -1,6 +1,7 @@
 package com.example.upmessenger.Activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -18,6 +20,8 @@ import com.example.upmessenger.Models.UpUsers;
 import com.example.upmessenger.R;
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
+import com.example.upmessenger.Service.NotificationService;
+import com.example.upmessenger.Service.UpMessageService;
 import com.google.android.material.tabs.TabLayout;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -45,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     UpUsers UpUser;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.home_tab);
         tabLayout.setupWithViewPager(viewPager);
+
+//        startForegroundService(new Intent(getBaseContext(), NotificationService.class));
+        startService(new Intent(getBaseContext(), NotificationService.class));
 
     }
 
@@ -105,10 +113,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        Log.d("DEVICE_TOKEN",getApplicationContext().getSharedPreferences("_", MODE_PRIVATE).getString("fb", "empty"));
         if(currentUser == null){
             Intent intent = new Intent(this,SignInActivity.class);
             Toast.makeText(getApplicationContext(),"Please Sign in First !!",Toast.LENGTH_SHORT).show();
             startActivity(intent);
+        }else {
+            FirebaseDatabase.getInstance().getReference("Users/"+FirebaseAuth.getInstance().getCurrentUser().getUid()+"/deviceToken")
+                    .setValue(getApplicationContext().getSharedPreferences("_", MODE_PRIVATE).getString("fb", "empty"));
         }
 
     }

@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class MessageAdapter extends RecyclerView.Adapter  {
+public class MessageAdapter extends RecyclerView.Adapter {
 
     private final int SENDER_VIEWHOLDER = 1;
     private final int RECIEVER_VIEWHOLDER = 2;
@@ -50,13 +50,12 @@ public class MessageAdapter extends RecyclerView.Adapter  {
             view = mLayoutInflater.inflate(R.layout.chat_sender, parent, false);
             return new SenderHolder(view);
         }
-        if (viewType==RECIEVER_VIEWHOLDER) {
+        if (viewType == RECIEVER_VIEWHOLDER) {
             view = mLayoutInflater.inflate(R.layout.chat_reciever, parent, false);
             return new RecieverHolder(view);
         }
         view = mLayoutInflater.inflate(R.layout.unread_header, parent, false);
         return new UnReadHolder(view);
-
 
     }
 
@@ -66,16 +65,21 @@ public class MessageAdapter extends RecyclerView.Adapter  {
         if (holder.getClass() == SenderHolder.class) {
             ((SenderHolder) holder).senderMessage.setText(messsage.getMessage());
             ((SenderHolder) holder).senderTime.setText(dateFormat.format(messsage.getTime()));
-            if (messsage.getSeen()==0)
+            if (messsage.getSeen() == 0)
+                ((SenderHolder) holder).seenState.setText("Sending");
+            else if (messsage.getSeen() == 3)
+                ((SenderHolder) holder).seenState.setText("Send");
+            else if (messsage.getSeen() == 2)
                 ((SenderHolder) holder).seenState.setText("Delievered");
             else
                 ((SenderHolder) holder).seenState.setText("Seen");
-        } else if (holder.getClass() == RecieverHolder.class){
+
+        } else if (holder.getClass() == RecieverHolder.class) {
             ((RecieverHolder) holder).recieverMessage.setText(messsage.getMessage());
             ((RecieverHolder) holder).recieverTime.setText(dateFormat.format(messsage.getTime()));
-        }else if (holder.getClass()==UnReadHolder.class){
-            Log.d("DAY_HEADER","UNREAD HOLDER CREATED POSITION "+position);
-            ((UnReadHolder) holder).unreadHeader.setText((chats.size()-position-1)+" Unread Messages ");
+        } else if (holder.getClass() == UnReadHolder.class) {
+            Log.d("DAY_HEADER", "UNREAD HOLDER CREATED POSITION " + position);
+            ((UnReadHolder) holder).unreadHeader.setText((chats.size() - position - 1) + " Unread Messages ");
         }
     }
 
@@ -106,7 +110,7 @@ public class MessageAdapter extends RecyclerView.Adapter  {
 
     public class RecieverHolder extends RecyclerView.ViewHolder {
 
-        TextView recieverMessage, recieverTime ;
+        TextView recieverMessage, recieverTime;
 
         public RecieverHolder(@NonNull View itemView) {
             super(itemView);
@@ -118,7 +122,7 @@ public class MessageAdapter extends RecyclerView.Adapter  {
 
     public class SenderHolder extends RecyclerView.ViewHolder {
 
-        TextView senderMessage, senderTime,seenState;
+        TextView senderMessage, senderTime, seenState;
 
         public SenderHolder(@NonNull View itemView) {
             super(itemView);
@@ -133,47 +137,11 @@ public class MessageAdapter extends RecyclerView.Adapter  {
     private class UnReadHolder extends RecyclerView.ViewHolder {
         TextView unreadHeader;
 
-        public UnReadHolder(@NonNull  View itemView) {
+        public UnReadHolder(@NonNull View itemView) {
             super(itemView);
 //            Log.d("DAY_HEADER","UNREAD HOLDER CREATED POSITION "+getAdapterPosition());
             unreadHeader = itemView.findViewById(R.id.unreadHeader);
         }
     }
-
-//    @Override
-//    public boolean isSection(int position) {
-//        Log.d("Day_Header_is_Section", String.valueOf(position));
-//        DateFormat dateFormat = new SimpleDateFormat("dd MMM ,yyyy");
-//
-//        Date msgDate = new Date(dateFormat.format(chats.get(position).getTime()));
-//        if (position == 0)
-//            return true;
-//
-//        Date prvDate = new Date(dateFormat.format(chats.get(position - 1).getTime()));
-//
-//        boolean result = msgDate.compareTo(prvDate) != 0;
-//        return result;
-//
-//    }
-
-//    @RequiresApi(api = Build.VERSION_CODES.O)
-//    @Override
-//    public CharSequence getSectionHeader(int position) {
-//        Log.d("Day_Header", String.valueOf(position));
-//
-//        DateFormat dateFormat = new SimpleDateFormat("dd MMM ,yyyy");
-//
-//        Date msgDate = new Date(dateFormat.format(chats.get(position).getTime()));
-//        Date todaysDate = new Date(dateFormat.format((new Date()).getTime()));
-//
-//        if (msgDate.compareTo(todaysDate) == 0)
-//            return "Today";
-//        else if ((msgDate.getYear() == todaysDate.getYear()) && (msgDate.getMonth() == todaysDate.getMonth()) && (msgDate.getDate() + 1 == todaysDate.getDate()))
-//            return "YesterDay";
-//        else {
-//            return dateFormat.format(msgDate);
-//        }
-//    }
-
 
 }
