@@ -103,6 +103,8 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
     HashMap<String, Object> updateUser;
 
     Integer userStateCode = 0, userRecieverCode = 0;
+    Integer RECIEVER_STATE = 0;
+
     Long lastSeenTime;
     Boolean lastSeenFound;
     Boolean onResumed = true;
@@ -127,9 +129,9 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
 //        lastSeenTime = 0l;
         lastSeenFound = false;
         onPaused = false;
-
+        //RegisterBroadCast Reciever for internet connection actions
         registerReceiver(networkChangeReciever, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
-        //Sender status is reciver is Online
+        //Sender status in reciver is Online
         userRecieverCode = 1;
         senderUsers.child("state").setValue(1);//updateChildren(updateUser);
         Log.d("USER_STATE_UPDATE", "User State Changed on Reciever : 1");
@@ -141,12 +143,14 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
     @Override
     public void setUserOnline() {
         //TYping , Online , OnaAPp
+        //Get Reciever Status
         recieverUsers.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 UpLastMessage upLastMessage = snapshot.getValue(UpLastMessage.class);
                 if (upLastMessage != null) {
+
                     if (upLastMessage.getMsgSenderId() != null)
                         lastMsgID = upLastMessage.getMsgSenderId();
 
@@ -157,9 +161,12 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                         if (upLastMessage.getState() != null) {
                             Log.d("USER_STATE_CHANGED", upLastMessage.getTyping().toString());
 
+                            //Set Revciever status appropriately if Internet connection is on
                             if (userStateCode == 1 && NetworkUtil.INSTANCE.getConnectivityStatus(getApplicationContext()) != 0) {
+
                                 if (upLastMessage.getTyping() == 1) {
                                     userState.setText("Typing.. .");
+                                    userRecieverCode = 1;
                                 } else {
                                     if (upLastMessage.getState() == 1) {
                                         userState.setText("onLine");
@@ -171,8 +178,10 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                                     }
                                 }
 
-                            } else
+                            } else{
                                 userState.setText("");
+                                userRecieverCode = 0;
+                            }
 
                         }
                     }
@@ -196,20 +205,22 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                     lastSeenFound = false;
                     lastSeenTime = lastSeen;
 
+                    //Fetch all msgs or ( new msgs )* and if there are unread msg,add a unreader header
                     senderMsgRef.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             int pos = -1;
                             chats.clear();
+                            //Add all msgs in Array List
                             for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                                 UpMesssage msg = dataSnapshot.getValue(UpMesssage.class);
 
-                                Log.d("DAY_HEADER_MSG", "position " + chats.size() + " " + msg.getTime() + " > " + lastSeenTime + " " + (msg.getTime() > lastSeenTime) + " " + (msg.getUserId() == reciverId));
-                                Log.d("DAY_HEADER_MSG", String.valueOf(lastSeenFound));
+//                                Log.d("DAY_HEADER_MSG", "position " + chats.size() + " " + msg.getTime() + " > " + lastSeenTime + " " + (msg.getTime() > lastSeenTime) + " " + (msg.getUserId() == reciverId));
+//                                Log.d("DAY_HEADER_MSG", String.valueOf(lastSeenFound));
 
                                 if (lastSeenFound == false && lastSeenTime != 0 && msg.getTime() > lastSeenTime && (lastMsgID.equals(reciverId))) {
                                     pos = chats.size();
-                                    Log.d("DAY_HEADER_MSG", "position " + chats.size() + " Unread Message Found");
+//                                    Log.d("DAY_HEADER_MSG", "position " + chats.size() + " Unread Message Found");
                                     chats.add(new UpMesssage("UnreadMessage"));
                                     lastSeenFound = true;
                                 }
@@ -218,21 +229,23 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                             }
 //                        lastMessageSeenTime=chats.get(chats.size()-1).getTime();
                             lastSeenFound = false;
+                            //For Header
                             if (chats.size() != 0)
                                 previousDate = new Date(dateFormat.format(chats.get(0).getTime()));
+
+                            //Bind ArrayList with Adapter
                             mMessageAdapter.setChats(chats);
+
+                            //Scroll to appropriate position
                             if (lastSeenFound == true)
                                 chatsRecycler.scrollToPosition(pos + 1);
                             else
                                 chatsRecycler.scrollToPosition(chats.size() - 1);
 
-//                            int i=0;
-//                            for(UpMesssage dumMsg:chats)
-//                                Log.d("CHATS_CHECK",dumMsg.getMessage()+" "+i++);
-
-                            Log.d("SEEN_MESSAGES", "onResumed == false " + (onResumed == false) + " onPaused == false " + (onPaused == false));
+//                            Log.d("SEEN_MESSAGES", "onResumed == false " + (onResumed == false) + " onPaused == false " + (onPaused == false));
+                            //If there are new msg ,mark them also as seen
                             if (onResumed == false && onPaused == false) {
-                                Log.d("SEEN_MESSAGES", "Through msgs added");
+//                                Log.d("SEEN_MESSAGES", "Through msgs added");
                                 recieverUsers.child("lastTime").addValueEventListener(seenListner);
                             }
 
@@ -300,24 +313,28 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         seenListner = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //Message can only be seen if MessageActivity is Visible
                 if (onPaused == false) {
                     Long lastMsgTime = snapshot.getValue(Long.class);
                     if (lastMsgTime != null) {
-                        Log.d("SEEN_MESSAGES", "lastMessage>lastMsgSeen " + (lastMsgTime > lastMessageSeenTime));
+//                        Log.d("SEEN_MESSAGES", "lastMessage>lastMsgSeen " + (lastMsgTime > lastMessageSeenTime));
 
                         if (lastMsgTime > lastMessageSeenTime) {
-
+                            //Get Unread Messages and Mark as Seen
                             senderMsgRef.orderByChild("time").startAfter(lastMessageSeenTime).addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                    Log.d("SEEN_MESSAGES", "Got Unread Messages count : " + snapshot.getChildrenCount());
+//                                    Log.d("SEEN_MESSAGES", "Got Unread Messages count : " + snapshot.getChildrenCount());
+                                    //For every unread Msg , mark as 'SEEN' in reciever-user msg list
                                     for (DataSnapshot snp : snapshot.getChildren()) {
                                         UpMesssage upMesssage = snp.getValue(UpMesssage.class);
-                                        Log.d("SEEN_MESSAGES", upMesssage.getMessage());
+//                                        Log.d("SEEN_MESSAGES", upMesssage.getMessage());
+                                        //Marking as Seen
                                         reciverMsgRef.orderByChild("time").equalTo(upMesssage.getTime()).addValueEventListener(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                                 for (DataSnapshot snp1 : snapshot.getChildren()) {
+                                                    Log.d("SEEN_MESSAGES",snp1.getValue(UpMesssage.class).getMessage());
                                                     Log.d("SEEN_MESSAGES", "Changing to Seen State");
                                                     snp1.getRef().child("seen").setValue(1);
                                                 }
@@ -377,6 +394,7 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
 
         backImage.setOnClickListener((view) -> finish());
 
+        //For Typing Status
         recieverUsers.child("Typing").addValueEventListener(new ValueEventListener() {
             @SuppressLint("ResourceType")
             @RequiresApi(api = Build.VERSION_CODES.M)
@@ -405,13 +423,16 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
 
         Log.d("SERVER_VALUE", "Server Time is " + ServerValue.TIMESTAMP);
 
-        //For User State , Profile,Name
+        //For User State , Profile,Name,Device Token
         recieverRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UpUsers upUser = snapshot.getValue(UpUsers.class);
+                //User Name in Top
                 if (upUser.getName() != null)
                     profileName.setText(upUser.getName());
+
+                //Profile Pic in Top
                 if (upUser.getProfilePic() != "") {
                     Glide.with(getApplicationContext())
                             .load(upUser.getProfilePic())
@@ -419,7 +440,9 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                             .into(profileImg);
                 }
 
+                //Reciever State i
                 if (upUser.getState() != null) {
+                    //Offline
                     if (upUser.getState() == 0) {
                         userStateCode = 0;
                         userState.setText("Offline");
@@ -433,6 +456,7 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                     }
                 }
 
+                //Device Token for FCM
                 if (upUser.getDeviceToken() != null)
                     reciverDeviceToken = upUser.getDeviceToken();
 
@@ -450,6 +474,7 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         messageSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //get msg from editText
                 String msg = message.getText().toString();
                 if (!msg.isEmpty()) {
 
@@ -465,15 +490,9 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                     updateUser.put("lastTime", date.getTime());
                     updateUser.put("msgSenderId", senderId);
 
-//                    senderUsers.updateChildren(updateUser).addOnSuccessListener(new OnSuccessListener<Void>() {
-//                        @Override
-//                        public void onSuccess(Void unused) {
-//                            senderMsgRef.push().setValue(upMesssage);
-//                        }
-//                    });
-
                     lastMsgID = senderId;
 
+                    //Add new msg in users-reciever msg list
                     senderMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
@@ -484,8 +503,12 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                             senderUsers.updateChildren(updateUser);
                             updateUser.remove("lastMessageSeen");
 
+                            //if reciver device token is available and in not in user's message activity then send the notification
+                            //If reciever is already in user's message activity , there is no need to send notification and status will be marked as 'Seen'
                             if (reciverDeviceToken != null && !reciverDeviceToken.equals("empty") && userRecieverCode==0){
+                                //For Notification
                                 sendMsgToServer(SERVER_URL,reciverDeviceToken);
+                                //TO change status to 'Send'
                                 senderMsgRef.orderByKey().limitToLast(1).addValueEventListener(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -504,11 +527,12 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                                 });
                             }
 
+
                         }
                     });
 
 //                    updateUser.remove("lastMessageSeen");
-
+                    //Add new msg in reciever-user msg list and update unReadCount
                     reciverMsgRef.push().setValue(upMesssage).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
@@ -516,6 +540,8 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
 //                            recieverRef.updateChildren(updateUser);
 //                            recieverUsers.child(senderId).child("lastTime").setValue(updateUser.get("lastTime"));
 //                            updateUser.put("seen",1);
+
+                            //Update unReadCount
                             recieverUsers.child("unReadCount").addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -527,15 +553,12 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
                                     }
 
                                 @Override
-                                public void onCancelled(@NonNull DatabaseError error) {
-
-                                }
+                                public void onCancelled(@NonNull DatabaseError error) {}
                             });
                             recieverUsers.updateChildren(updateUser);
 
                         }
                     });
-
 
                     message.getText().clear();
                 }
@@ -585,13 +608,13 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("SEEN_MESSAGES", "On Paused True");
+//        Log.d("SEEN_MESSAGES", "On Paused True");
         onPaused = true;
         onResumed = false;
+
         senderUsers.child("lastTime").removeEventListener(seenListner);
-//        reciverMsgRef.removeEventListener();
-//        unregisterReceiver(networkChangeReciever);
-        //Sender status is reciver is Offline
+
+        //Sender status in reciver Message Acticity is Offline
         userRecieverCode = 0;
         senderUsers.child("state").setValue(0);
         Log.d("USER_STATE_UPDATE", "User State Changed on Reciever : 0");
@@ -607,7 +630,7 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         onResumed = false;
         userRecieverCode = 0;
 
-        Log.d("SEEN_MESSAGES", "On Paused True");
+//        Log.d("SEEN_MESSAGES", "On Paused True");
 
         senderUsers.child("lastTime").removeEventListener(seenListner);
     }
@@ -618,7 +641,7 @@ public class MessagesActivity extends AppCompatActivity implements OnNetworkGone
         onPaused = true;
         onResumed = false;
 
-        Log.d("SEEN_MESSAGES", "On Paused True");
+//        Log.d("SEEN_MESSAGES", "On Paused True");
 
         senderUsers.child("lastTime").removeEventListener(seenListner);
         unregisterReceiver(networkChangeReciever);
