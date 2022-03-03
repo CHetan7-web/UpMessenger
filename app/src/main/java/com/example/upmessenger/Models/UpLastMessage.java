@@ -9,6 +9,10 @@ public class UpLastMessage {
     String msgSenderId;
     Integer unReadCount = 0;
 
+
+    Integer seen ;
+    Integer msgType;
+
     @Override
     public String toString() {
         return "UpLastMessage{" +
@@ -19,6 +23,8 @@ public class UpLastMessage {
                 ", lastMessageSeen=" + lastMessageSeen +
                 ", msgSenderId='" + msgSenderId + '\'' +
                 ", unReadCount=" + unReadCount +
+                ", seen=" + seen +
+                ", msgType=" + msgType +
                 '}';
     }
 
@@ -91,4 +97,19 @@ public class UpLastMessage {
         this.lastTime = time;
     }
 
+    public Integer getSeen() {
+        return seen;
+    }
+
+    public void setSeen(Integer seen) {
+        this.seen = seen;
+    }
+
+    public Integer getMsgType() {
+        return msgType;
+    }
+
+    public void setMsgType(Integer msgType) {
+        this.msgType = msgType;
+    }
 }

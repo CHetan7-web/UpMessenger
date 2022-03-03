@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-     android:layout_height="wrap_content">
+    android:layout_height="wrap_content">
+
+<!--    <AnimatedImageDrawable-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -14,28 +16,87 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/chat_sender"
-        android:maxWidth="320dp"
-        android:maxHeight="300dp"
         android:minWidth="70dp"
         android:minHeight="40dp">
 
-<!--        android:maxHeight="230dp"-->
+        <!--        android:maxHeight="230dp"-->
+        <!--        android:maxHeight="300dp"-->
+
+
+        <!--        Background Image-->
+        <ImageView
+            android:id="@+id/backgroundImage"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline3"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bgImageDiscription"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="@id/backgroundImage"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundImage"
+            app:layout_constraintTop_toTopOf="@id/backgroundImage"
+            app:layout_constraintEnd_toEndOf="@id/backgroundImage"
+
+            android:gravity="center"
+
+            android:padding="8dp"
+
+            android:visibility="gone"
+            android:background="@color/upMessengerStatusBar"
+
+            android:text="GIF"/>
+
+        <!--        Image With Message-->
+        <ImageView
+            android:id="@+id/messageImage"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="3dp"
+
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/senderMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/senderMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textNoSuggestions|textMultiLine|textImeMultiLine"
-            android:maxWidth="278dp"
+            android:layout_marginStart="8dp"
+            android:autoLink="web|phone"
             android:clickable="true"
+            android:inputType="textNoSuggestions|textMultiLine|textImeMultiLine"
+            android:linksClickable="true"
+            android:maxWidth="278dp"
             android:minWidth="30dp"
             android:minHeight="4dp"
-            android:linksClickable="true"
-            android:text="Hello WOlrd"
-            android:textSize="14dp"
-            android:autoLink="web|phone"
-            android:textColorLink="@color/com_facebook_blue"
-            android:layout_marginStart="8dp"
             android:paddingTop="4dp"
+            android:textColorLink="@color/com_facebook_blue"
+            android:textSize="14dp"
+
             app:layout_constraintBottom_toTopOf="@+id/senderTime"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
             app:layout_constraintStart_toStartOf="parent"

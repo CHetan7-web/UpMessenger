@@ -50,11 +50,17 @@ public class ChatFragment extends Fragment implements UserOnClick {
     public ChatFragment() {
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        String userId;
+        if (FirebaseAuth.getInstance().getCurrentUser() != null)
+             userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        else
+            userId="";
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference()
                                     .child("Users-Connected")
@@ -178,4 +184,5 @@ public class ChatFragment extends Fragment implements UserOnClick {
             }
         });
     }
+
 }

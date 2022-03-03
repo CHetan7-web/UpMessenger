@@ -1,2 +1,5 @@
 rootProject.name = "UpMessenger"
 include ':app'
+include ':emoticonpack-android7'
+include ':emoticongifkeyboard'
+include ':gifpack-giphy'

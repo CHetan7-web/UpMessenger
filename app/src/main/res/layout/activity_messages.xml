@@ -48,11 +48,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text=""
                 android:gravity="center"
-                app:layout_constraintTop_toBottomOf="@id/profileName"
+                android:text=""
                 app:layout_constraintStart_toEndOf="@+id/profileImage"
-                />
+                app:layout_constraintTop_toBottomOf="@id/profileName" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileImage"
@@ -102,34 +101,75 @@
         android:layout_below="@id/chatToolbar" />
 
     <LinearLayout
+        android:id="@+id/chatSendMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/chatSendMessage"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:layout_margin="5dp">
+        android:layout_above="@id/keyboard_container"
+        android:layout_marginBottom="6dp"
+        android:padding="1dp"
+        android:orientation="horizontal">
 
-        <EditText
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/chat_message_edit_text"
+
+            android:orientation="horizontal">
+        <!--        <com.example.upmessenger.Component.UpEditText-->
+        <!--            android:id="@+id/message"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@drawable/chat_message_edit_text"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="Enter a Message . ."-->
+        <!--            android:inputType="textMultiLine|textPersonName"-->
+        <!--            android:paddingStart="14dp"-->
+        <!--            android:layout_margin="4dp" />-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/emoji_open_close_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:foregroundTint="@color/background_dark"
+            android:src="@drawable/ic_emoticon"
+            android:padding="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription"/>
+
+        <com.example.upmessenger.Component.UpEditText
             android:id="@+id/message"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/chat_message_edit_text"
             android:ems="10"
+            android:layout_gravity="center"
+            android:paddingStart="5dp"
             android:hint="Enter a Message . ."
             android:inputType="textMultiLine|textPersonName"
-            android:paddingStart="14dp"
-            android:layout_margin="4dp" />
+            android:maxLines="3" />
 
+        </LinearLayout>
         <ImageView
             android:id="@+id/messageSend"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="3dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/message_send"
+            android:padding="4dp"
             app:srcCompat="@android:drawable/ic_menu_send"
-            app:tint="@color/white"
-            android:background="@drawable/message_send"/>
+            app:tint="@color/white" />
 
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/keyboard_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

@@ -11,6 +11,47 @@
     android:minWidth="70dp"
     android:minHeight="40dp">
 
+    <!--        Background Image-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/backgroundImage"
+
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="2dp"
+
+        android:src="@drawable/chats_background"
+
+        android:visibility="gone"
+        />
+
+    <!--        Image With Message-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:id="@+id/messageImage"
+
+        app:layout_constraintBottom_toTopOf="@id/reciverMessage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="2dp"
+
+        android:visibility="gone"/>
+
     <TextView
         android:id="@+id/reciverMessage"
         android:layout_width="wrap_content"
